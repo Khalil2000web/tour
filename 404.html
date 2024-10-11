@@ -4,20 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Khalil</title>
+<meta charset="UTF-8">
 <meta name="description" content="The Official Website of Khalil">
-<meta property="og:description" content="The Official Website of Khalil">
-<meta property="og:image" content="https://www.khaliiil.com/system/7FA53553-2225-48AC-B68C-89172E7E6340.jpeg">
-<meta property="og:url" content="https://www.khaliiil.com">
-<meta property="og:site_name" content="Khaliiil">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="en_US">
-<meta property="og:author" content="Khalil">
-<link rel="icon" type="image/x-icon" href="https://khaliiil.com/system/FF863B55-25CD-41EA-B199-86DC40B5A73F.jpeg">    
-<meta name="URL" content="http://www.khaliiil.com">
-<meta name="twitter:title" content="Khalil">
+<link rel="icon" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/favicon.ico">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/android-chrome-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/android-chrome-192x192.png" sizes="192x192">  
+<meta name="URL" content="https://www.khaliiil.com">
 <meta name="twitter:description" content="The Official Website of Khalil">
 <meta property="og:title" content="Khalil">
 <meta property="og:description" content="The Official Website of Khalil">
+<meta property="og:image" content="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/photo-output.jpeg" />
 <meta property="og:site_name" content="Khalil">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.khaliiil.com/">
@@ -47,11 +46,11 @@
     --font_two_regular:'BB Manual Mono Regular',arial;
     --zIndex_1000:1000;
 }
-html, body {margin: 0;padding: 0;color:var(--primary_color);background:var(--main_container_bg);font-family:var(--font_two_regular);}
+html, body {margin: 0;padding: 0;color:var(--primary_color);background:var(--main_container_bg);font-family:var(--font_two_regular);max-height:100%;}
 .nav_bottom {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
 .nav_bottom {bottom:16px;background: none;}
 .nav_bottom .menu {display: flex;gap: 45px;}
-.nav_bottom .menu a, .nav_bottom .menu p {user-select:none;-webkit-user-select:none;text-shadow:none;font-family:var(--font_two_regular);-webkit-text-stroke:0.2px #fff;color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:16.6px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
+.nav_bottom .menu a, .nav_bottom .menu p {user-select:none;-webkit-user-select:none;text-shadow:none;font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:16.6px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
 @media screen and (max-width:400px) {
 .nav_bottom .menu {gap:20px;}
 #copyright_sign_i {display:none;}
@@ -101,7 +100,7 @@ html, body {margin: 0;padding: 0;color:var(--primary_color);background:var(--mai
 .nav-top {top:15px;background: none;padding:0;margin:0;}
 .nav-top .menu {display:flex;gap: 30px;padding-bottom:0;margin:0;}
 .nav-top .menu a {color:var(--primary_color);text-decoration:none;}
-.nav-top .menu a p {font-family:var(--font_two_regular);color:var(--primary_color);-webkit-text-stroke:0.2px #fff;user-select:none;-webkit-user-select:none;text-decoration: none;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;padding:0;margin:0;}
+.nav-top .menu a p {font-family:var(--font_two_regular);color:var(--primary_color);user-select:none;-webkit-user-select:none;text-decoration: none;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;padding:0;margin:0;}
 @media screen and (max-width:400px) {
 .nav-top .menu {gap:30px;}
 .nav-top .menu a p{font-size:23px;}}
@@ -109,38 +108,27 @@ html, body {margin: 0;padding: 0;color:var(--primary_color);background:var(--mai
 .nav-top .menu {gap:40px;}
 .nav-top .menu a p{font-size:23px;}}
 @media screen and (min-width:501px) and (max-width:600px) {
-.nav-top .menu {gap:50px;}
+.nav-top .menu {gap:60px;}
 .nav-top .menu a p{font-size:23px;}}
 @media screen and (min-width:601px) and (max-width:700px) {
-.nav-top .menu {gap:80px;}}
+.nav-top .menu {gap:50px;}}
 @media screen and (min-width:701px) and (max-width:800px) {
 .nav-top .menu {gap:80px;}
 .nav-top .menu a p{font-size:23px;}}
 @media screen and (min-width:801px) and (max-width:990px) {
-.nav-top .menu {gap:90px;}
+.nav-top .menu {gap:80px;}
 .nav-top .menu a p{font-size:23px;}}
 @media screen and (min-width:1000px) {
-.nav-top .menu {gap:90px;}
+.nav-top .menu {gap:60px;}
 .nav-top .menu a p{font-size:23px;}}
 #desk_ii {display:none;}
-.main_layout_top_nav_vii {z-index:400;display:flex;flex-direction:row;width:auto;height:30px;background:none;position:fixed;align-items:center;justify-content:space-between;top:60px;left:50%;transform:translateX(-50%);}
+.main_layout_top_nav_vii {z-index:4002;display:flex;flex-direction:row;width:auto;height:30px;background:none;position:fixed;align-items:center;justify-content:space-between;top:60px;left:50%;transform:translateX(-50%);}
 .main_layout_top_nav_vii a {font-family:var(--font_two_regular);font-size:20px;text-decoration:none;color:var(--primary_color);}
 .main_layout_top_nav_vii p {font-family:var(--font_two_regular);margin:10px;color:var(--primary_color);}
 @media screen and (min-width: 600px) {
 #desk_ii {display: flex;}
 .main_layout_top_nav_vii {display: none;}}
-
-
-.container {
-  position:absolute;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-  width:100%;
-  height:auto;
-  justify-content:center;
-  align-items:center;
-}
+.container {position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:100%;height:auto;justify-content:center;align-items:center;height:max-content;max-height:100%;}
 .container pre {text-align:center;color:var(--primary_color);font-size:2.1rem;word-wrap:break-word;white-space:pre-wrap;line-height:1.5;font-family:var(--font_two_regular);padding:20px;}
 .container pre a {color:var(--primary_color);text-decoration:underline;text-underline-offset:9px;}
 </style>
@@ -153,6 +141,11 @@ html, body {margin: 0;padding: 0;color:var(--primary_color);background:var(--mai
 HOME
 </p>
 </a>
+<a href="https://tour.khaliiil.com/">
+<p>
+TOUR
+</p>
+</a>
 <a href="https://shop.khaliiil.com/">
 <p>
 SHOP
@@ -161,11 +154,6 @@ SHOP
 <a href="https://www.khaliiil.com/blog">
 <p>
 BLOG
-</p>
-</a>
-<a href="https://khaliiil.com/core">
-<p>
-CORE
 </p>
 </a>
 </div>
