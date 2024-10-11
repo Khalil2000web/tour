@@ -1,2 +1,5 @@
 User-agent: *
 Disallow: /static/media/#000/Close.2024trmdl180.svg
+Disallow: /static/media/icons8-close-100.svg
+Disallow: /static/media/icon-volume.svg
+Disallow: /static/media/icon-mute.svg
