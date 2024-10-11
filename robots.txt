@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /static/media/#000/Close.2024trmdl180.svg
