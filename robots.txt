@@ -3,3 +3,4 @@ Disallow: /static/media/#000/Close.2024trmdl180.svg
 Disallow: /static/media/icons8-close-100.svg
 Disallow: /static/media/icon-volume.svg
 Disallow: /static/media/icon-mute.svg
+Disallow: /52A79B5B-E35F-47CD-AFD3-5731F133A281.jpeg
