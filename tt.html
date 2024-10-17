@@ -488,51 +488,79 @@ document.addEventListener("DOMContentLoaded", function () {
       nextButton.style.display = currentIndex === mediaElements.length - 1 ? 'none' : 'block';
     }
 
-    function openOverlay(index) {
-      disableScroll();
-      currentIndex = index;
-      const clonedMedia = mediaElements[currentIndex].cloneNode(true);
-      overlayContent.innerHTML = '';
-      overlayContent.appendChild(clonedMedia);
-      overlay.style.display = 'flex';
-      overlay.classList.add('overlay-show');
-      overlay.classList.add('opening');
-      overlay.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
+ function openOverlay(index) {
+  disableScroll();
+  currentIndex = index;
+  const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+  overlayContent.innerHTML = '';
+  overlayContent.appendChild(clonedMedia);
+  overlay.style.display = 'flex';
+  overlay.classList.add('overlay-show');
+  overlay.classList.add('opening');
+  overlay.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
 
-      setTimeout(() => {
-        overlay.classList.remove('opening');
-        overlay.classList.add('fullscreen');
-      }, 140);
+  setTimeout(() => {
+    overlay.classList.remove('opening');
+    overlay.classList.add('fullscreen');
+  }, 140);
 
-      muteAllVideos();
-      checkButtons();
+  muteAllVideos();
+  checkButtons();
 
-      if (clonedMedia.querySelector('video')) {
-        const video = clonedMedia.querySelector('video');
-        const soundOffIcon = clonedMedia.querySelector('.sound-off-icon');
-        const soundOnIcon = clonedMedia.querySelector('.sound-on-icon');
+  const clonedVideo = clonedMedia.querySelector('video');
+  const clonedPlayBtn = clonedMedia.querySelector('.play-btn');
+  const clonedSpinner = clonedMedia.querySelector('.spinner');
 
-        video.muted = true;
-        soundOffIcon.style.display = 'block';
-        soundOnIcon.style.display = 'none';
+  if (clonedVideo && clonedPlayBtn && clonedSpinner) {
+    clonedVideo.addEventListener('waiting', () => {
+      clonedSpinner.style.display = 'block';
+    });
 
-        soundOffIcon.addEventListener('click', () => {
-          video.muted = false;
-          soundOffIcon.style.display = 'none';
-          soundOnIcon.style.display = 'block';
-        });
+    clonedVideo.addEventListener('canplay', () => {
+      clonedSpinner.style.display = 'none';
+    });
 
-        soundOnIcon.addEventListener('click', () => {
-          video.muted = true;
-          soundOffIcon.style.display = 'block';
-          soundOnIcon.style.display = 'none';
-        });
+    clonedVideo.addEventListener('play', () => {
+      clonedPlayBtn.style.display = 'none';
+    });
 
-        currentOverlayVideo = video;
-        video.play();
+    clonedVideo.addEventListener('pause', () => {
+      clonedPlayBtn.style.display = 'block';
+    });
+
+    clonedPlayBtn.addEventListener('click', () => {
+      if (clonedVideo.paused) {
+        clonedVideo.play();
+        clonedPlayBtn.style.display = 'none';
       }
-    }
+    });
+  }
+
+  if (clonedVideo) {
+    const soundOffIcon = clonedMedia.querySelector('.sound-off-icon');
+    const soundOnIcon = clonedMedia.querySelector('.sound-on-icon');
+    
+    clonedVideo.muted = true;
+    soundOffIcon.style.display = 'block';
+    soundOnIcon.style.display = 'none';
+
+    soundOffIcon.addEventListener('click', () => {
+      clonedVideo.muted = false;
+      soundOffIcon.style.display = 'none';
+      soundOnIcon.style.display = 'block';
+    });
+
+    soundOnIcon.addEventListener('click', () => {
+      clonedVideo.muted = true;
+      soundOffIcon.style.display = 'block';
+      soundOnIcon.style.display = 'none';
+    });
+
+    currentOverlayVideo = clonedVideo;
+    clonedVideo.play();
+  }
+}
 
     function closeOverlay() {
       overlay.style.display = 'none';
