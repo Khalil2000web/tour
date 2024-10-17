@@ -410,6 +410,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (!video || !playBtn || !spinner) return;
 
+    video.removeAttribute('controls'); // Hide the default browser controls
+
     video.addEventListener('waiting', () => {
       spinner.style.display = 'block';
     });
