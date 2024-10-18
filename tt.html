@@ -260,6 +260,7 @@ a {cursor:pointer;}
 .spinner {border: 6px solid rgba(255, 255, 255, 0.3);border-top: 6px solid white;border-radius: 50%;width: 40px;height: 40px;animation: spin 1s linear infinite;}
 @keyframes spin {0% { transform: rotate(0deg); }100% { transform: rotate(360deg); }}
 body.overlay-active {overflow: hidden;user-select: none;pointer-events: none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-ms-overflow-style: none;touch-action:none;-webkit-touch-callout:none;-moz-touch-callout: none;-ms-touch-action: none;}
+.overlay > * {pointer-events: auto;}
 </style>
 </head>
 <body>
