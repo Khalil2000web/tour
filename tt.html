@@ -527,34 +527,49 @@ document.body.classList.add('overlay-active');
   muteAllVideos();
   checkButtons();
 
-  const clonedVideo = clonedMedia.querySelector('video');
-  const clonedPlayBtn = clonedMedia.querySelector('.play-btn');
-  const clonedSpinner = clonedMedia.querySelector('.spinner');
+const clonedVideo = clonedMedia.querySelector('video');
+const clonedPlayBtn = clonedMedia.querySelector('.play-btn');
+const clonedSpinner = clonedMedia.querySelector('.spinner');
 
-  if (clonedVideo && clonedPlayBtn && clonedSpinner) {
-    clonedVideo.addEventListener('waiting', () => {
-      clonedSpinner.style.display = 'block';
-    });
-
-    clonedVideo.addEventListener('canplay', () => {
-      clonedSpinner.style.display = 'none';
-    });
-
-    clonedVideo.addEventListener('play', () => {
-      clonedPlayBtn.style.display = 'none';
-    });
-
-    clonedVideo.addEventListener('pause', () => {
-      clonedPlayBtn.style.display = 'block';
-    });
-
-    clonedPlayBtn.addEventListener('click', () => {
-      if (clonedVideo.paused) {
-        clonedVideo.play();
-        clonedPlayBtn.style.display = 'none';
-      }
-    });
+if (clonedVideo && clonedPlayBtn && clonedSpinner) {
+  function showClonedSpinner() {
+    clonedSpinner.style.display = 'block';
+    clonedPlayBtn.style.display = 'none';
   }
+
+  function hideClonedSpinner() {
+    clonedSpinner.style.display = 'none';
+  }
+
+  function showClonedPlayButton() {
+    clonedPlayBtn.style.display = 'block';
+    hideClonedSpinner();
+  }
+
+  clonedVideo.addEventListener('waiting', () => {
+    showClonedSpinner(); // Show loader when the video is buffering
+  });
+
+  clonedVideo.addEventListener('canplay', () => {
+    hideClonedSpinner(); // Hide loader when the video is ready to play
+  });
+
+  clonedVideo.addEventListener('play', () => {
+    hideClonedSpinner(); // Hide spinner when the video starts playing
+    clonedPlayBtn.style.display = 'none'; // Ensure play button is hidden
+  });
+
+  clonedVideo.addEventListener('pause', () => {
+    showClonedPlayButton(); // Show play button when the video is paused
+  });
+
+  clonedPlayBtn.addEventListener('click', () => {
+    if (clonedVideo.paused) {
+      clonedVideo.play();
+      showClonedSpinner();
+    }
+  });
+}
 
   if (clonedVideo) {
     const soundOffIcon = clonedMedia.querySelector('.sound-off-icon');
