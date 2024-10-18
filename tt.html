@@ -404,38 +404,52 @@ PRIVACY
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const mediaElements = document.querySelectorAll('.media');
-
   mediaElements.forEach(media => {
     const video = media.querySelector('video');
     const playBtn = media.querySelector('.play-btn');
     const spinner = media.querySelector('.spinner');
-
     if (!video || !playBtn || !spinner) return;
 
-    video.removeAttribute('controls'); // Hide the default browser controls
+    video.removeAttribute('controls');
+
+    function showSpinner() {
+      spinner.style.display = 'block';
+      playBtn.style.display = 'none';
+    }
+
+    function hideSpinner() {
+      spinner.style.display = 'none';
+    }
+
+    function showPlayButton() {
+      playBtn.style.display = 'block';
+      hideSpinner();
+    }
 
     video.addEventListener('waiting', () => {
-      spinner.style.display = 'block';
+      showSpinner();
     });
 
     video.addEventListener('canplay', () => {
-      spinner.style.display = 'none';
+      hideSpinner();
     });
 
     playBtn.style.display = 'block';
+
     playBtn.addEventListener('click', () => {
       if (video.paused) {
         video.play();
-        playBtn.style.display = 'none';
+        showSpinner();
       }
     });
 
-    video.addEventListener('pause', () => {
-      playBtn.style.display = 'block';
+    video.addEventListener('play', () => {
+      hideSpinner();
+      playBtn.style.display = 'none';
     });
 
-    video.addEventListener('play', () => {
-      playBtn.style.display = 'none';
+    video.addEventListener('pause', () => {
+      showPlayButton();
     });
   });
 });
