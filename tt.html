@@ -147,13 +147,15 @@ img {-webkit-touch-callout: none;-webkit-user-drag: none;-webkit-user-select: no
 .overlay::-webkit-scrollbar {display: none;}
 .overlay-content {position:absolute;width:100%;max-width:100%;height:auto;top:0;left:0;padding:0;margin:0;z-index:1000;touch-action: pan-x pan-y;}
 .overlay-content .media {width:100%;max-width:100%;height:auto;margin-bottom:70px;}
-.close-btn, .prev-btn, .next-btn {position: absolute;4}
-.close-btn {right: 10px;top:10px;width:32px;height:auto;max-width:33px;z-index:10001;}
-.close-btn:hover {background:rgba(255,255,255,0.2);border-radius:5px;} 
-.prev-btn {top: 40px;width:17px;z-index:10001;padding:5px 16px;border:3px solid rgba(39, 92, 134, 0.7);user-drag:none;}
-.prev-btn:active, .prev-btn:hover, .next-btn:active, .next-btn:hover {background:rgba(0,0,0,0.2);border-radius:1px;}
-.next-btn {top: 40px;width:17px;z-index:10001;padding:5px 16px;border:3px solid rgba(39, 92, 134, 0.7);}
-.prev-btn img, .next-btn img {width:20px;height:auto;}
+.close-btn, .prev-btn, .next-btn {position: absolute;justify-content:center;align-items:center;}
+.close-btn {border-radius:5px;right: 10px;top:10px;z-index:10001;background:none;border:none;}
+.cl {width:35px;color:#fff;padding:0;}
+button:active {background:rgba(0,0,0,0.4);}
+button{padding:0;margin:0;}
+.prev-btn,.next-btn {background:none;border:none;border-radius:0;}
+.me,.cc {color:white;width:35px;}
+.prev-btn {top: 30px;z-index:10001;border:3px solid rgba(39, 92, 134, 0.5);}
+.next-btn {top: 30px;z-index:10001;border:3px solid rgba(39, 92, 134, 0.5);}
 video::-webkit-media-controls {display: none !important;}
 video::-webkit-media-controls {display: none !important;}
 video::-moz-media-controls {display: none !important;}
@@ -383,9 +385,9 @@ SWITZERLAND
 </div>
 <div id="overlay" class="overlay" style="pointer-events:all;overflow:auto;touch-action:all;-webkit-touch-callout:auto;">
 <div id="overlay-content" class="overlay-content" style="pointer-events:all;overflow:auto;touch-action:all;-webkit-touch-callout:auto;"></div>
-<img id="close-btn" class="close-btn" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACKElEQVR4nO3cTW4TQRBA4QISDsJPBIiLgESAJbALeMOVg/gRRHCJzEMjTQsLcOKx47gq/b6l5YVLT90zmrYmQpIkSZIkSZIkSZIkXTvgAHgAHAG3oijgNvBomuUgKgLeAT/44yvwKooBXgPflub4DryNgjEG/jV+togigMUFc7yJCsatCTj7zxClorA6RnNWYhuerheXSR2Fy2M0DyM74P4ag6SNwvoxRveiyJb1qWIU5sU4LbFljYDnwHmlKMyLMc72LCoBTmZG+bjH3/q+ym+98VHoJUaFKPQWI3MUeo2RMQq9x8gUBWPkiYIx8kTBGHmiYIw8UTBGnigYI08UjJEnCsbIEwVj5ImCMfJEwRipDoyGmd/d+4FYDyul7weFBaMMxsgTZTBGniiDMfJEGYyxQ8y7tTVIshiNqyRRjMYoiWI0RkkUozHKFjEWPjpJgg0eFGb4i9GNxBZPbY2SKEZjlCtylecZuH3lidEYZUO7POnDlZInRmOUNV3nGTiulDwxGqOssM9/h+BKyROjMUqiGE33UTLFiN6jZIzRbZTMMbqLUiFGN1GAlx28fOY4KgDuTO9XLBNjwyhfxlkju+ntnWWXPvO2rxJvlHtaNcYGUR5HdsBd4FeVbWqL7evnOGtUAHxYMcR5hRh/RVm1Uk6ikinK8kr5DLyIYoDj6QK+vDJqxWiAQ+DJ9OrY/HckF985Hk2zHK76niRJkiRJkiRJkiRJip35Dagkt/setTYhAAAAAElFTkSuQmCC" alt="Close">
-<img id="prev-btn" class="prev-btn" src="/static/media/IMG_1095.svg" alt="Previous">
-<img id="next-btn" class="next-btn" src="/static/media/IMG_1096.svg" alt="Next">
+<button id="close-btn" class="close-btn"><svg viewBox="0 0 24 24" aria-hidden="true" class="cl"><path fill="white" d="M19 6 6 19M6 6l13 13" stroke="white" stroke-width="2" stroke-linecap="round"></path></svg></button>
+<button id="prev-btn" class="prev-btn"><svg viewBox="0 0 24 24" aria-hidden="true" class="cc" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M18 4l-8 8 8 8" stroke="white" stroke-width="2.7" stroke-linejoin="miter"></path></svg></button>
+<button id="next-btn" class="next-btn">  <svg viewBox="0 0 24 24" aria-hidden="true" class="cc" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M6 4l8 8-8 8" stroke="white" stroke-width="2.7" stroke-linejoin="miter"></path></svg></button>
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
