@@ -66,9 +66,10 @@
 @font-face {font-family: 'BB Manual Mono Regular';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX.22d272fc.ttf') format('truetype');font-display: swap;font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;}
 @font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX-SemiBold.otf') format('opentype');font-display: swap;font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;}
 body, html {margin:0;padding:0;color:var(--primary-color);font-family:var(--font-main);background-color:var(--background-color);}
-.nav_bottom {position: fixed;width: 100%;left: 50%;transform:translateX(-50%);display: flex;justify-content: center;align-items: center;z-index:var(--z-index-max);bottom:16px;background: none;}
+.nav_bottom {position: fixed;width: 100%;left: 50%;transform:translateX(-50%);display: flex;justify-content: center;align-items: center;z-index:var(--z-index-max);bottom:0;background: none;}
 .nav_bottom .menu {display: flex;gap: 45px;}
 .nav_bottom .menu a, .nav_bottom .menu p {line-height:1.6;align-self:end;word-wrap:break-word;user-select:none;-webkit-user-select:none;text-shadow:none;font-family:var(--font-main);color:var(--text-color);text-decoration: none;font-weight:300;font-size:16px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
+.nav_bottom .menu p {padding-bottom:16px;}
 @media screen and (max-width:400px) {
 .nav_bottom .menu {gap:20px;}
 #copyright_sign_i {display:block;}
@@ -114,10 +115,10 @@ body, html {margin:0;padding:0;color:var(--primary-color);font-family:var(--font
 #copyright_sign_iii {display:block;}
 #sep {display:block;}}
 #copyright_sign_i, #copyright_sign_ii, #copyright_sign_iii {color:var(--text-color);}
-.nav-top {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--z-index-max);top:15px;background: none;padding:0;margin:0;}
+.nav-top {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--z-index-max);top:0;background: none;padding:0;margin:0;}
 .nav-top .menu {display:flex;gap: 30px;padding-bottom:0;margin:0;}
 .nav-top .menu a {text-decoration:none;}
-.nav-top .menu a p {font-family:var(--font-main);color:var(--text-color);user-select:none;-webkit-user-select:none;text-decoration: none;font-weight:300;font-size:30px;text-transform:uppercase;padding:0;margin:0;}
+.nav-top .menu a p {font-family:var(--font-main);color:var(--text-color);user-select:none;-webkit-user-select:none;text-decoration: none;font-weight:300;font-size:30px;text-transform:uppercase;padding:0;padding-top:15px;margin:0;}
 @media screen and (max-width:400px) {
 .nav-top .menu {gap:20px;}
 .nav-top .menu a p{font-size:19px;}}
