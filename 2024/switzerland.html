@@ -173,7 +173,6 @@ STORE
 </a>
 </div>
 </div>
-</div>
 <div class="title"><a href="/">3. SWITZERLAND</a></div>
 <div class="media-container">
 <div class="mcb27"><div style="pointer-events:none;width:100%;max-width:100%;"><img class="image" loading="lazy" alt="Image" title="" decoding="async" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9238.jpeg"></div></div>
@@ -268,7 +267,6 @@ CREDITS
 </a>
 </div>
 </div>
-</div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const mediaElements = document.querySelectorAll('.media');
@@ -287,6 +285,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const video = entry.target;
+      if (!entry.isIntersecting && !video.muted) {
+        video.muted = true;
+        const media = video.closest('.media');
+        if (media) {
+          const soundOffIcon = media.querySelector('.sound-off-icon');
+          const soundOnIcon = media.querySelector('.sound-on-icon');
+          soundOffIcon.style.display = 'block';
+          soundOnIcon.style.display = 'none';
+        }
+      }
+    });
+  }, { threshold: 0.1 });
+
   mediaElements.forEach(media => {
     const video = media.querySelector('video');
     const soundOffIcon = media.querySelector('.sound-off-icon');
@@ -295,7 +309,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const spinner = media.querySelector('.spinner');
 
     video.removeAttribute('controls');
-    
+
     video.addEventListener('waiting', () => {
       spinner.style.display = 'block';
     });
@@ -332,6 +346,8 @@ document.addEventListener('DOMContentLoaded', function() {
       soundOffIcon.style.display = 'block';
       soundOnIcon.style.display = 'none';
     });
+
+    observer.observe(video);
   });
 });
 </script>
