@@ -184,6 +184,7 @@ STORE
 <img src="/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="unmute">
 <div class="play-btn"></div>
 <div class="spinner"></div>
+<div class="error-message" style="display: none; color: red;">Error: Video could not be loaded.</div>
 </div>
 <div class="mcb27"><div style="pointer-events:none;width:100%;max-width:100%;"><img class="image" loading="lazy" alt="Image" title="Germany_img_2024_9" decoding="async" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/germany-media/IMG_9256.jpeg"></div></div>
 <div class="mcb27"><div style="pointer-events:none;width:100%;max-width:100%;"><img class="image" loading="lazy" alt="Image" title="Germany_img_2024_8" decoding="async" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/germany-media/GMP_U2F2ZUdNQVgwMQ%3D%3D.gif"></div></div>
@@ -244,6 +245,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Intersection Observer to mute videos when out of view
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       const video = entry.target;
@@ -266,6 +268,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const soundOnIcon = media.querySelector('.sound-on-icon');
     const playBtn = media.querySelector('.play-btn');
     const spinner = media.querySelector('.spinner');
+    const errorMessage = document.createElement('div');
+    
+    // Setup the error message div
+    errorMessage.classList.add('error-message');
+    errorMessage.style.display = 'none';
+    errorMessage.style.color = 'red';
+    errorMessage.textContent = 'Error: Video could not be loaded.';
+    media.appendChild(errorMessage);
 
     video.removeAttribute('controls');
 
@@ -277,7 +287,12 @@ document.addEventListener('DOMContentLoaded', function() {
       spinner.style.display = 'none';
     });
 
-    playBtn.style.display = 'block';
+    // Error event listener
+    video.addEventListener('error', () => {
+      spinner.style.display = 'none';
+      errorMessage.style.display = 'block';
+    });
+
     playBtn.addEventListener('click', () => {
       if (video.paused) {
         video.play();
