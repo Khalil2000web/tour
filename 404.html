@@ -74,6 +74,30 @@ body {margin:0;padding:0;background-color:var(--background-color);font-family:va
 </style>
 </head>
 <body>
+<div class="nav-top">
+<div class="menu">
+<a href="https://music.khaliiil.com/">
+<p>
+HOME
+</p>
+</a>
+<a href="https://tour.khaliiil.com">
+<p>
+TOUR
+</p>
+</a>
+<a href="https://music.khaliiil.com">
+<p>
+MUSIC
+</p>
+</a>
+<a href="https://khaliiil.com/blog">
+<p>
+BLOG
+</p>
+</a>
+</div>
+</div>
 <p class="ccj404">
 404
 </p>
@@ -111,14 +135,5 @@ PRIVACY
 </a>
 </div>
 </div>
-
-
-<div id="navbar-container"></div>
-<script>
-fetch('https://khaliiil.com/navbar-leg652427637')
-.then(response => response.text())
-.then(data => document.getElementById('navbar-container').innerHTML = data)
-.catch(error => console.error('Error loading navbar:', error));
-</script>
 </body>
 </html>
