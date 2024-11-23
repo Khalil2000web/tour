@@ -78,6 +78,12 @@ body {margin:0;padding:0;background-color:var(--background-color);font-family:va
 <p class="sub263">
 OOPS! THIS PAGE DOESN’T EXIST. HEAD HOME AND <a href="/">TRY AGAIN</a>.
 </p>
+<script>
+fetch('https://khaliiil.com/footer626-pages61')
+.then(response => response.text())
+.then(data => document.getElementById('footer-container').innerHTML = data)
+.catch(error => console.error('Error loading navbar:', error));
+</script>
 <div id="navbar-container"></div>
 <script>
 fetch('https://khaliiil.com/navbar-leg652427637')
