@@ -79,6 +79,30 @@ body {margin:0;padding:0;background-color:var(--background-color);font-family:va
 </style>
 </head>
 <body>
+<div class="nav-top">
+<div class="menu">
+<a href="https://music.khaliiil.com/">
+<p>
+HOME
+</p>
+</a>
+<a href="https://tour.khaliiil.com">
+<p>
+TOUR
+</p>
+</a>
+<a href="https://music.khaliiil.com">
+<p>
+MUSIC
+</p>
+</a>
+<a href="https://khaliiil.com/blog">
+<p>
+BLOG
+</p>
+</a>
+</div>
+</div>
 <div class="title"><a href="/">2024: 1. FRANCE</a></div>
 <div class="media-container">
 <div class="mcb27"><div style="pointer-events:none;width:100%;max-width:100%;"><img class="image" loading="lazy" alt="Image" title="image:france_2024_02" decoding="async" src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/france2024/IMG_6325.heic"></div></div>
@@ -141,14 +165,6 @@ PRIVACY
 </a>
 </div>
 </div>
-
-<div id="navbar-container"></div>
-<script>
-fetch('/navbar.html')
-.then(response => response.text())
-.then(data => document.getElementById('navbar-container').innerHTML = data)
-.catch(error => console.error('Error loading navbar:', error));
-</script>
 <script>
 document.addEventListener('copy', function (e) {
   const selection = window.getSelection();
