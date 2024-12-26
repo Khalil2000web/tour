@@ -283,6 +283,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
+    
+    
+    function toggleTouchAction() {
+  const imageElement = document.querySelector('.overlay .image');
+
+  if (imageElement && overlayElement) {
+    if (imageElement.offsetHeight > 750) {
+      overlay.style.touchAction = 'auto';
+    } else {
+      overlay.style.touchAction = 'none';
+    }
+  }
+}
+
+
 
     function playAllVideos() {
       mediaElements.forEach(media => {
