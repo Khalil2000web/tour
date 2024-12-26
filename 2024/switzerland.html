@@ -285,16 +285,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     
-    function toggleTouchAction() {
+function toggleTouchAction() {
   const imageElement = document.querySelector('.overlay .image');
 
   if (imageElement && overlayElement) {
     if (imageElement.offsetHeight > 750) {
       overlay.style.touchAction = 'auto';
+      return false;
     } else {
       overlay.style.touchAction = 'none';
+      return true;
     }
   }
+  return null;
 }
 
     function playAllVideos() {
