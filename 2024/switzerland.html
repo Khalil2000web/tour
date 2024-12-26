@@ -297,8 +297,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 }
 
-
-
     function playAllVideos() {
       mediaElements.forEach(media => {
         if (media.querySelector('video')) {
@@ -333,6 +331,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   muteAllVideos();
   checkButtons();
+  toggleTouchAction();
 
 const clonedVideo = clonedMedia.querySelector('video');
 const clonedPlayBtn = clonedMedia.querySelector('.play-btn');
