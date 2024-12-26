@@ -320,15 +320,13 @@ document.addEventListener("DOMContentLoaded", function () {
   checkButtons();
   
   
-  const imageElement = document.querySelector('.overlay .image');
-
-  if (imageElement && overlay) {
-    if (imageElement.offsetHeight > 860) {
-      overlay.style.touchAction = 'auto';
-    } else {
-      overlay.style.touchAction = 'none';
-    }
+if (clonedMedia && overlay) {
+  if (clonedMedia.offsetHeight > 800) {
+    overlay.style.touchAction = 'none';
+  } else {
+    overlay.style.touchAction = 'auto';
   }
+}
 
 const clonedVideo = clonedMedia.querySelector('video');
 const clonedPlayBtn = clonedMedia.querySelector('.play-btn');
