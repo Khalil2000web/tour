@@ -283,22 +283,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
-    
-    
-function toggleTouchAction() {
-  const imageElement = document.querySelector('.overlay .image');
-
-  if (imageElement && overlayElement) {
-    if (imageElement.offsetHeight > 750) {
-      overlay.style.touchAction = 'auto';
-      return false;
-    } else {
-      overlay.style.touchAction = 'none';
-      return true;
-    }
-  }
-  return null;
-}
 
     function playAllVideos() {
       mediaElements.forEach(media => {
@@ -334,7 +318,17 @@ function toggleTouchAction() {
 
   muteAllVideos();
   checkButtons();
-  toggleTouchAction();
+  
+  
+  const imageElement = document.querySelector('.overlay .image');
+
+  if (imageElement && overlay) {
+    if (imageElement.offsetHeight > 750) {
+      overlay.style.touchAction = 'auto';
+    } else {
+      overlay.style.touchAction = 'none';
+    }
+  }
 
 const clonedVideo = clonedMedia.querySelector('video');
 const clonedPlayBtn = clonedMedia.querySelector('.play-btn');
