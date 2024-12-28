@@ -289,8 +289,8 @@ function enableScroll() {
     }
 
     function checkButtons() {
-      prevButton.style.pointerEvents = currentIndex === 0 ? 'none' : '';
-      nextButton.style.pointerEvents = currentIndex === mediaElements.length - 1 ? 'none' : '';
+      prevButton.style.display = currentIndex === 0 ? 'none' : '';
+      nextButton.style.display = currentIndex === mediaElements.length - 1 ? 'none' : '';
     }
 
  function openOverlay(index) {
