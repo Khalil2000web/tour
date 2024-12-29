@@ -36,6 +36,7 @@
 <style>.footer-mobile {position: fixed;width: 100%;max-width:80%;left: 50%;transform:translateX(-50%);display: flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;justify-content:space-around;align-items: center;z-index:var(--z-index-max);bottom:0;background:transparent;gap:8px;}.footer-mobile a {color:var(--text-color);text-decoration:none;align-self:end;padding:0;margin:0;}.footer-mobile a p {color:var(--text-color);font-family:var(--font-main);padding:0 5px;margin:0;padding-bottom:18px;font-size:1rem;font-weight:300;}</style>
 <style>@media screen and (min-width:46em) {.diskfooter {display:flex;}.footer-mobile {display:none;}}</style>
 <style>.diskfooter {position: fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);width: 100%;max-width:98%;margin:0 auto;display:none;justify-content: space-between;align-items: center;padding: 0;color:var(--text-color);z-index:1000;}@media screen and (min-width: 30em){.diskfooter {-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}}@media screen and (min-width: 48em){.diskfooter {display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;font-size:11px;}}.diskfooter a, .diskfooter #cp {margin: 0;padding: 0;color:var(--text-color);}#cp {text-align: center;flex-grow: 1;}.diskfooter a {text-decoration: none;}.diskfooter a #lefts{padding-right:30px;}.diskfooter a #rights{padding-left:30px;}.diskfooter p {padding: 0;margin:0;}</style>
+<style>.blacklayer {position: fixed;top:0;left:0;margin:0;padding:0;width:100%;max-width:100%;height:100%;touch-action:none;-webkit-touch-callout:none;pointer-events:none;display:none;z-index:990;background-color:#000;overflow:hidden;}</style>
 </head>
 <body>
 <div class="nav-top">
@@ -166,6 +167,7 @@ PRIVACY
 </p>
 </a>
 </div>
+<div class="blacklayer"></div>
 <div id="overlay" class="overlay">
 <div id="overlay-content" class="overlay-content"></div>
 <button id="close-btn" class="close-btn"><svg viewBox="0 0 25 22" aria-hidden="true" class="close-overlay"><path fill="white" d="M19 6 6 19M6 6l13 13" stroke="white" stroke-width="2.2" stroke-linecap="round"></path></svg></button>
@@ -360,6 +362,9 @@ function enableScroll() {
   muteAllVideos();
   checkButtons();
 
+  const blackLayer = document.querySelector('.blacklayer');
+  blackLayer.style.display = 'block';
+
 const clonedVideo = clonedMedia.querySelector('video');
 const clonedPlayBtn = clonedMedia.querySelector('.play-btn');
 const clonedSpinner = clonedMedia.querySelector('.spinner');
@@ -434,6 +439,9 @@ if (clonedVideo && clonedPlayBtn && clonedSpinner) {
       overlay.classList.remove('fullscreen');
       overlay.classList.add('closing');
     document.body.classList.remove('overlay-active');
+
+    const blackLayer = document.querySelector('.blacklayer');
+    blackLayer.style.display = 'none';
 
  const iframes = document.querySelectorAll(".overlay iframe");
     iframes.forEach(iframe => {
