@@ -525,13 +525,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!localStorage.getItem('buttonClicked')) {
         prevBtn.style.border = '3px solid #275c86';
         nextBtn.style.border = '3px solid #275c86';
-        closeButton.style.border = '3px solid #fff';
     }
 
     function hideBorders() {
         prevBtn.style.border = '3px solid transparent';
         nextBtn.style.border = '3px solid transparent';
-        closeButton.style.border = '3px solid transparent';
         localStorage.setItem('buttonClicked', 'true');
     }
 
