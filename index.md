@@ -12,8 +12,6 @@ title: Khalil
 <style>.menutop {position: fixed;top:25px;left:50%;transform: translateX(-50%);width:100%;max-width:90%;display: flex;margin:0;padding:0;align-items: center;justify-content: space-around;z-index: var(--z-index-max);}.menutop a {color: var(--text-color);text-decoration: none;user-select: none;-webkit-user-select: none;font-size:22px;cursor: pointer;} </style>
 <style>.menufooter {position: fixed;bottom: 0;left: 50%;transform: translateX(-50%);width:100%;max-width:90%;display: flex;align-items: end;justify-content: space-between;margin:0;padding:0;z-index: var(--z-index-max);}.menufooter a {color: var(--text-color);text-decoration: none;font-size:15px;padding:0 10px;margin: 0;padding-bottom:20px;user-select:none;-webkit-user-select:none;cursor: pointer;}.menufooter p {padding:0 10px;margin:0;padding-bottom:20px;font-size:15px;} @media screen and (min-width:45em) {.menufooter a {font-size: 14px;}.menutop {max-width: 60%;}.menutop a {font-size: 20px;}} </style>
 <style>.hf5gf {position: fixed;top:100px;left:50%;transform: translateX(-50%);width:100%;max-width:90%;display: flex;padding:0;margin:0;align-items: center;justify-content: space-around;z-index: var(--z-index-max);}.hf5gf a {color: var(--text-color);text-decoration: none;cursor: pointer;font-size: 20px;}@media screen and (min-width:45em) {.grid-container {max-width: 80%;}} </style>
-</head></style>
-
 
 <div class="grid-container">
 <a href="2024/credits"><div class="grid-item cw br_no_img"><p style="display:block;">credits</p></div></a>
