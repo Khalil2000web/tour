@@ -1,7 +1,7 @@
 ---
 layout: def
 title: Khalil
-permalink: /2024/france/
+permalink: /2024/france
 ---
 
 
