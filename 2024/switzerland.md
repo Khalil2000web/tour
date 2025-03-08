@@ -1,7 +1,6 @@
 ---
 layout: def
 title: Khalil
-permalink: /2024/switzerland/
 ---
 
 <div class="gallery">
