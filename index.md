@@ -7,7 +7,7 @@ title: Khalil
 <style> header a[href="/"] {display: none;}</style>
 {% endif %}
 
-<style>.nd52vspw {position: fixed;top:1.5%;left:0;width:100%;height:100%;align-items: center;justify-content: space-around;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-around;z-index: var(--z-index-max);}.nd52vspw a {color: var(--text-color);text-decoration: none;font-size:20px;padding:0;margin:0;} </style>
+<style>.nd52vspw {position: fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;max-width:90%;align-items: center;justify-content: space-around;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-around;z-index: var(--z-index-max);flex-wrap: wrap;}.nd52vspw a {color: var(--text-color);text-decoration: none;font-size:22px;letter-spacing:2px;padding:0;margin:0;word-wrap: break-word;} </style>
 <div class="nd52vspw">
 <a href="/" id="left">FGS</a>
 <a href="/">2024</a>
