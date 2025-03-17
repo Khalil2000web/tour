@@ -6,8 +6,8 @@ title: Khalil
 {% if page.url == "/" %}
 <style> header a[href="/"] {display: none;}</style>
 {% endif %}
-
-<div class="header"><p>2024</p><p>iii TRIPS</p></div>
+<style>.bs73 {z-index:1000;position: fixed;top:110px;left: 50%;transform: translateX(-50%);width:100%;max-width:95%;display: flex;padding:0;margin:0;justify-content: space-around;align-items: center;}.header p {color: var(--text-color);padding:0;margin: 0;font-size: 18px;} </style>
+<div class="bs73"><p>2024</p><p>iii TRIPS</p></div>
 <div class="menutop"><a href="https://khaliiil.com">HOME</a><a href="/">MUSIC</a><a href="https://khaliiil.com/crt">CRT</a></div>
 <div class="menufooter"><a href="https://khaliiil.com/terms-conditions">TERMS</a><p>&copy; 2025</p><a href="https://khaliiil.com/privacy-policy">PRIVACY POLICY</a></div>
 <div class="container">
