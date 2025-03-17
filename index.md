@@ -8,8 +8,6 @@ title: Khalil
 {% endif %}
 <style>.bs73 {z-index:1000;position: fixed;top:110px;left: 50%;transform: translateX(-50%);width:100%;max-width:95%;display: flex;padding:0;margin:0;justify-content: space-around;align-items: center;}.header p {color: var(--text-color);padding:0;margin: 0;font-size: 18px;} </style>
 <div class="bs73"><p>2024</p><p>iii TRIPS</p></div>
-<div class="menutop"><a href="https://khaliiil.com">HOME</a><a href="/">MUSIC</a><a href="https://khaliiil.com/crt">CRT</a></div>
-<div class="menufooter"><a href="https://khaliiil.com/terms-conditions">TERMS</a><p>&copy; 2025</p><a href="https://khaliiil.com/privacy-policy">PRIVACY POLICY</a></div>
 <div class="container">
 <a href="/2024/credits"><div class="circle-container"><div class="circle"><div class="text" style="color: #ccc;">CREDITS</div></div><div class="small-text">2024</div></div></a>
 <a href="/2024/france"><div class="circle-container"><div class="circle"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/france2024/IMG_6325.heic" decoding="async" alt="Image of France"><div class="text">FRANCE</div></div><div class="small-text">RIQUEWIHR, COLMAR, STRASBOURG</div></div></a>   
