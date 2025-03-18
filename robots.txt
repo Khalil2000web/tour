@@ -1,3 +1,3 @@
 User-agent: *
-Disallow: /static/media/icon-volume.svg
-Disallow: /static/media/icon-mute.svg
+Disallow: /static/images/icon-volume.svg
+Disallow: /static/images/icon-mute.svg
