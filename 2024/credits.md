@@ -3,7 +3,6 @@ layout: def
 title: Khalil
 ---
 
-<style>.main5 {width:100%;max-width:83%;padding:0;margin:0 auto;padding-top:90px;padding-bottom: 150px;line-height: 1.8;}.main5 h2 {font-weight: 100;font-family: var(--font-main-bold);padding-bottom:40px;padding-top:40px;text-align: center;letter-spacing: 1px;}.main5 p {text-transform: uppercase;font-size:14px;padding:0;margin:0;text-align: left;line-height:1.8;}.main5 li {text-transform: uppercase;font-size:14px;text-align: left;line-height: 1.8;}.main5 a {color: var(--text-color);} </style>
 <div class="main5">
 <h2>2024 TOUR CREDITS</h2>
 <p>OWNERSHIP AND RIGHTS<br>ALL CONTENT FEATURED ON THIS WEBSITE’S TOUR PAGE, INCLUDING BUT NOT LIMITED TO IMAGES, VIDEOS, TEXT, GRAPHICS, AND DESIGN ELEMENTS, IS THE EXCLUSIVE PROPERTY OF KHALIL. UNAUTHORIZED USE, REPRODUCTION, OR DISTRIBUTION OF ANY MATERIAL IS STRICTLY PROHIBITED WITHOUT PRIOR WRITTEN PERMISSION FROM THE OWNER.</p>
@@ -14,5 +13,5 @@ title: Khalil
 <li>Design & Content: The layout, textual content, and overall design have been created and are solely owned by Khalil.</li>
 </ul>
 <p>USAGE POLICY<br>THE MATERIALS ON THIS PAGE ARE PROVIDED FOR VIEWING AND INFORMATIONAL PURPOSES ONLY. THEY ARE NOT TO BE DOWNLOADED, REPRODUCED, SHARED, OR ALTERED IN ANY WAY WITHOUT EXPLICIT PERMISSION FROM KHALIL.</p>
-<p>CONTACT FOR PERMISSIONS<br>IF YOU WISH TO USE OR INQUIRE ABOUT ANY MATERIAL FROM THIS PAGE, PLEASE REACH OUT DIRECTLY:<br><br>EMAIL: SUPPORT@KHALIIIL.COM<br>THANK YOU FOR RESPECTING THE RIGHTS OF THE CREATOR.</p>
+<p>CONTACT FOR PERMISSIONS<br>IF YOU WISH TO USE OR INQUIRE ABOUT ANY MATERIAL FROM THIS PAGE, PLEASE REACH OUT DIRECTLY:<br><br>EMAIL: HELP@KHALIIIL.COM<br>THANK YOU FOR RESPECTING THE RIGHTS OF THE CREATOR.</p>
 </div>
