@@ -4,6 +4,7 @@ title: Khalil
 permalink: /2024/germany/
 ---
 
+<div class="bs73"><a href="/">GERMANY</a><a href="/">2024/a></div>
 <div class="gallery">
 <a rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/germany-media/IMG_9256.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></a>
 <a rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/germany-media/GMP_U2F2ZUdNQVgwMQ%3D%3D.gif" class="image" alt="Image" loading="lazy" decoding="async"></a>
