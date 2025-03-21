@@ -1,6 +1,12 @@
 ---
 layout: def
 title: Khalil
+author: "Khalil"
+date: 2024-07-11 10:00:00
+last_modified_at: 2025-03-21 10:30:00
+tags: [France, Germany, Switzerland, Europe, 2024 Travel credits]
+published: true
+css: /static/css/credits.css
 ---
 
 <div class="main5">
