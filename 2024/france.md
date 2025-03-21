@@ -1,12 +1,18 @@
 ---
 layout: def
 title: Khalil
-permalink: /2024/france/
+author: "Khalil"
+date: 2024-07-11 10:00:00
+last_modified_at: 2025-03-21 10:30:00
+categories: [2024 trips, France, Europe]
+tags: [France, Europe, 2024 Travel]
+excerpt: "A page of my 2024 iii travels, FRANCE 2024"
+published: true
+css: /static/css/trip.css
+js: https://cdn.jsdelivr.net/gh/Khalil2000web/tour@main/static/js/vid25.js
 ---
 
-<style>.bs73 {z-index:1000;position: fixed;top:110px;left: 50%;transform: translateX(-50%);width:100%;max-width:95%;display: flex;padding:0;margin:0;justify-content: space-around;align-items: center;}.bs73 a {color: var(--text-color);text-decoration:none;padding:0;margin: 0;font-size:21px;} </style>
-<div class="bs73"><a href="/">FRANCE</a><a href="/">2024/a></div>
-
+<div class="bs73"><a href="/">FRANCE</a><a href="/">2024</a></div>
 <div class="gallery">
 <a rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/france2024/IMG_6325.heic" class="image" alt="Image" loading="lazy" decoding="async"></a>
 <a rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/france2024/IMG_6397.heic" class="image" alt="Image" loading="lazy" decoding="async"></a>
