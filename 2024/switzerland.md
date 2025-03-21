@@ -1,6 +1,14 @@
 ---
 layout: def
 title: Khalil
+author: "Khalil"
+date: 2024-07-11 10:00:00
+last_modified_at: 2025-03-21 10:30:00
+categories: [2024 trips, Switzerland, Europe]
+tags: [France, Europe, 2024 Travel]
+excerpt: "A page of my 2024 iii travels, SWITZERLAND 2024"
+published: true
+css: /static/css/trip.css
 ---
 <div class="bs73"><a href="/">SWITZERLAND</a><a href="/">2024/a></div>
 <div class="gallery">
