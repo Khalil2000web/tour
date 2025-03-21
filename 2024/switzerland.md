@@ -2,7 +2,7 @@
 layout: def
 title: Khalil
 ---
-
+<div class="bs73"><a href="/">SWITZERLAND</a><a href="/">2024/a></div>
 <div class="gallery">
 <a rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9238.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></a>
 <a rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9274.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></a>
