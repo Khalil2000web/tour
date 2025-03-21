@@ -8,7 +8,9 @@ categories: [2024 trips, Germany, Europe]
 tags: [Germany, Europe, 2024 Travel]
 excerpt: "A page of my 2024 iii travels, GERMANY 2024"
 published: true
-css: /static/css/trip.css
+css: 
+  - /static/css/trip.css
+  - /static/css/secheader2.css
 js: https://cdn.jsdelivr.net/gh/Khalil2000web/tour@main/static/js/vid25.js
 ---
 
