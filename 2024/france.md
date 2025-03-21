@@ -17,7 +17,7 @@ js: https://cdn.jsdelivr.net/gh/Khalil2000web/tour@main/static/js/vid25.js
 <div class="bs73">
 <a href="/">FRANCE</a>
 <a href="/">2024</a>
-<a href="/"><img src="https://cdn.khaliiil.com/IMG_7783%202.svg" style="max-width:30px;display:block;" alt="France flag"></a>
+<a href="/"><img src="https://cdn.khaliiil.com/IMG_7783%202.svg" style="max-width:30px;display:block;padding:0;margin:0;" alt="France flag"></a>
 </div>
 
 <div class="gallery">
