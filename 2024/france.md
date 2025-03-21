@@ -14,7 +14,12 @@ css:
 js: https://cdn.jsdelivr.net/gh/Khalil2000web/tour@main/static/js/vid25.js
 ---
 
-<div class="bs73"><a href="/">FRANCE</a><a href="/">2024</a><a href="/"><img src="https://cdn.khaliiil.com/IMG_7783%202.svg" alt="France flag"></a></div>
+<div class="bs73">
+<a href="/">FRANCE</a>
+<a href="/">2024</a>
+<a href="/"><img src="https://cdn.khaliiil.com/IMG_7783%202.svg" style="max-width:30px;display:block;" alt="France flag"></a>
+</div>
+
 <div class="gallery">
 <a rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/france2024/IMG_6325.heic" class="image" alt="Image" loading="lazy" decoding="async"></a>
 <a rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/france2024/IMG_6397.heic" class="image" alt="Image" loading="lazy" decoding="async"></a>
