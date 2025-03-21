@@ -1,7 +1,15 @@
 ---
 layout: def
 title: Khalil
-permalink: /2024/germany/
+author: "Khalil"
+date: 2024-07-11 10:00:00
+last_modified_at: 2025-03-21 10:30:00
+categories: [2024 trips, Germany, Europe]
+tags: [Germany, Europe, 2024 Travel]
+excerpt: "A page of my 2024 iii travels, GERMANY 2024"
+published: true
+css: /static/css/trip.css
+js: https://cdn.jsdelivr.net/gh/Khalil2000web/tour@main/static/js/vid25.js
 ---
 
 <div class="bs73"><a href="/">GERMANY</a><a href="/">2024/a></div>
