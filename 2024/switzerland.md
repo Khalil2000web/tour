@@ -13,7 +13,10 @@ css:
   - /static/css/secheader2.css
 js: https://cdn.jsdelivr.net/gh/Khalil2000web/tour@main/static/js/vid25.js
 ---
-<div class="stick4"><a href="/">SWITZERLAND</a><a href="/">2024</a></div>
+<div class="g4">
+<a href="/" style="text-align: left;">SWITZERLAND</a>
+<a href="/" style="text-align: right;">2024</a>
+</div>
 <div class="gallery">
 <a rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9238.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></a>
 <a rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9274.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></a>
