@@ -10,9 +10,8 @@ css:
   - /static/css/secheader2.css
 ---
 
-<div class="bs73"><a href="/">iii</a><a href="/">2024 TRIPS</a></div>
 <div class="container">
-<a href="/2024/credits"><div class="circle-container"><div class="circle"><div class="text" style="color: #ccc;">2024 CREDITS - THE III TRAVELS OF 2024</div></div><div class="small-text">2024</div></div></a>
+<a href="/2024/credits"><div class="circle-container"><div class="circle"><div class="text" style="color: #ccc;"><span style="font-size:26px;">CREDITS</span>2024: 3 TRAVELS</div></div><div class="small-text">2024</div></div></a>
 <a href="/2024/france"><div class="circle-container"><div class="circle"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/france2024/IMG_6325.heic" decoding="async" alt="Image of France"><div class="text">FRANCE</div></div><div class="small-text">RIQUEWIHR, COLMAR, STRASBOURG</div></div></a>   
 <a href="/2024/germany"><div class="circle-container"><div class="circle"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/germany-media/IMG_9199.jpeg" decoding="async" alt="Image of Germany"><div class="text">GERMANY</div></div><div class="small-text">THE BLACK FOREST</div></div></a>
 <a href="/2024/switzerland"><div class="circle-container"><div class="circle"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9271.jpeg" decoding="async" alt="Image of Switzerland"><div class="text">SWITZERLAND</div></div><div class="small-text">BASEL, INTERLAKEN, BERN, ZÜRICH</div></div></a>
