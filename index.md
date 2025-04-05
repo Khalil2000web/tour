@@ -7,12 +7,14 @@ last_modified_at: 2025-03-21 10:30:00
 published: true
 css:
   - /static/css/index.css
-  - /static/css/secheader2.css
 ---
 
-<div class="container">
-<a href="/2024/credits"><div class="circle-container"><div class="circle"><div class="text" style="color: #ccc;"><span style="font-size:26px;">CREDITS</span>2024: 3 TRAVELS</div></div><div class="small-text">2024</div></div></a>
-<a href="/2024/france"><div class="circle-container"><div class="circle"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/france2024/IMG_6325.heic" decoding="async" alt="Image of France"><div class="text">FRANCE</div></div><div class="small-text">RIQUEWIHR, COLMAR, STRASBOURG</div></div></a>   
-<a href="/2024/germany"><div class="circle-container"><div class="circle"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/germany-media/IMG_9199.jpeg" decoding="async" alt="Image of Germany"><div class="text">GERMANY</div></div><div class="small-text">THE BLACK FOREST</div></div></a>
-<a href="/2024/switzerland"><div class="circle-container"><div class="circle"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9271.jpeg" decoding="async" alt="Image of Switzerland"><div class="text">SWITZERLAND</div></div><div class="small-text">BASEL, INTERLAKEN, BERN, ZÜRICH</div></div></a>
+<div class="b4">
+<a href="/">2024 IN</a>
+<a href="/">3 DESTINATIONS</a>
+</div>
+<div class="city-gallery">
+<a href="/2024/france" class="city-card" style="background-image: url('https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/france2024/IMG_6325.heic');"><span>FRANCE</span></a>
+<a href="/2024/germany" class="city-card" style="background-image: url('https://raw.githubusercontent.com/Khalil2000web/Media/main/germany-media/IMG_9199.jpeg');"><span>GERMANY</span></a>
+<a href="/2024/switzerland" class="city-card" style="background-image: url('https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9271.jpeg');"><span>SWITZERLAND</span></a>
 </div>
