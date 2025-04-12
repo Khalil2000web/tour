@@ -7,7 +7,7 @@ last_modified_at: 2025-03-21 10:30:00
 categories: [2024 trips, Germany, Europe]
 tags: [Germany, Europe, 2024 Travel]
 excerpt: "A page of my 2024 iii travels, GERMANY 2024"
-published: false
+published: true
 css: 
   - /static/css/trip.css
   - /static/css/secheader2.css
