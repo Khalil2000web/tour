@@ -14,7 +14,7 @@ css:
 <a href="/">3 DESTINATIONS</a>
 </div>
 
-<div class="h6">2024</div
+<div class="h6">2024</div>
 
 <div class="city-gallery">
 <a href="/2024/france" class="city-card" style="background-image: url('https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/france2024/IMG_6325.heic');"><span>FRANCE</span></a>
