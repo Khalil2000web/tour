@@ -15,6 +15,7 @@ js: https://cdn.jsdelivr.net/gh/Khalil2000web/tour@main/static/js/vid25.js
 ---
 
 <div class="g4">
+<a href="/" style="text-align: left;">2.</a>
 <a href="/" style="text-align: left;">GERMANY</a>
 <a href="/" style="text-align: right;">2024</a>
 </div>
