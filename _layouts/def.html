@@ -26,13 +26,13 @@
 <style>.h6 {display:flex;width:100%;height:20vh;align-items:center;justify-content:center;font-size:50px;font-weight:300;text-align:center;user-select:none;-webkit-user-select:none;padding-top:45px;} </style>
 
 
-<style>.navbar{position:fixed;top:0;left:0;display:flex;flex-direction:column;align-items:start;justify-content:space-between;width:100%;padding:10px;border-bottom:1px solid #cccccc77;z-index:10000;background-color:#ffffff11;gap:10px;}.first__layer{width:100%;display:flex;align-items:center;justify-content:space-between;}.links{display:flex;align-items:center;justify-content:space-between;width:40%;flex-wrap:wrap;line-height:1.7;}.copyright__content{display:flex;align-items:center;justify-content:center;line-height:1.7;}.copyright__content p{padding:0 10px;margin:0;font-size:17px;text-align:center;}.links a{color:var(--text-color);text-decoration:none;font-size:17px;padding:0 10px;cursor:pointer;}.links a:hover{text-decoration:underline;text-underline-offset:4px;}.second__layer{width:100%;display:flex;align-items:center;justify-content:flex-end;}.footer{display:flex;align-items:center;justify-content:flex-end;width:60%;flex-wrap:wrap;line-height:1.7;}.footer a{color:var(--text-color);text-decoration:none;font-size:14px;padding:0 10px;cursor:pointer;}.footer a:hover{text-decoration:underline;text-underline-offset:4px;}</style>
-{% if page.url == "/" %}<style>.navbar a[href="/"]{display:none;}</style>{% endif %}
+<style>.navbar{position:fixed;top:0;width:100%;background-color:#00000004;padding:20px 0;z-index:10000;text-align:center;border-bottom:1px solid #ffffff31;}.nav-row{display:flex;justify-content:center;gap:30px;margin:10px 0;flex-wrap:wrap;}.navbar a{color:var(--text-color);transition:color 0.3s;text-transform:uppercase;}.links a,.footer a {text-decoration:none;}.links{font-size:20px;}.footer{font-size:16px;}.navbar a:hover{color:#ccc;}.navbar .copyright{color:#888;font-size:16px;align-self:center;}</style>
+{% if page.url == "/" %}<style>.links a[href="/"]{text-decoration: line-through;}</style>{% endif %}
 </head>
 <body>
 <nav class="navbar">
-<div class="first__layer"><div class="links"><a href="https://tour.khaliil.com">HOME</a><a href="/">TOUR</a></div><div class="copyright__content"><p>&copy; 2025</p></div></div>
-<div class="second__layer"><div class="footer"><a href="https://khaliil.com/join">JOIN</a><a href="https://khaliil.com/terms-conditions">TERMS</a><a href="https://khaliil.com/privacy-policy">PRIVACY</a></div></div>
+<div class="nav-row links"><a href="https://khaliil.com">Home</a><a href="/">Tour</a><a href="https://khaliil.com/join">Join</a></div>
+<div class="nav-row footer"><a href="https://khaliil.com/terms-conditions">Terms</a><a href="https://khaliil.com/privacy-policy">Privacy</a><span class="copyright">© 2025</span></div>
 </nav>
 
 {{ content }}
