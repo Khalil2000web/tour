@@ -1,19 +1,14 @@
 ---
 layout: def
 title: FRANCE
-author: "Khalil"
+author: "Khaliil"
 date: 2024-07-11 10:00:00
-last_modified_at: 2025-03-21 10:30:00
+last_modified_at: 2025-05-09 10:30:00
 categories: [2024 trips, France, Europe]
 tags: [France, Europe, 2024 Travel]
 excerpt: "A page of my 2024 iii travels, FRANCE 2024"
 published: true
-css: 
-  - /static/css/trip.css
-  - /static/css/secheader2.css
-js: https://cdn.jsdelivr.net/gh/Khalil2000web/tour@main/static/js/vid25.js
 ---
-
 <div class="g4">
 <a href="/" style="text-align: left;">1.</a>
 <a href="/" style="text-align: left;">FRANCE</a>
