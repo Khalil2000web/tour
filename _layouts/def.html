@@ -166,7 +166,9 @@ containers.forEach(container => {
       renderFrame();
     }
     hideSpinner();
-    if (video.paused) showPlayButton();
+    video.play().catch(() => {
+      showPlayButton(); // fallback if autoplay fails
+    });
   });
 
   video.addEventListener('waiting', showSpinner);
@@ -201,11 +203,9 @@ containers.forEach(container => {
     }, 5000);
   });
 
-  // Initial state
   showSpinner();
   hidePlayButton();
 
-  // Initial error check
   setTimeout(() => {
     if (video.readyState < 2) {
       displayErrorMessage(
