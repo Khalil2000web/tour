@@ -112,6 +112,9 @@ containers.forEach(container => {
       showSpinner();
       hidePlayButton();
       video.load();
+      video.play().catch(() => {
+        showPlayButton();
+      });
     });
   }
 
@@ -166,9 +169,6 @@ containers.forEach(container => {
       renderFrame();
     }
     hideSpinner();
-    video.play().catch(() => {
-      showPlayButton(); // fallback if autoplay fails
-    });
   });
 
   video.addEventListener('waiting', showSpinner);
@@ -206,6 +206,12 @@ containers.forEach(container => {
   showSpinner();
   hidePlayButton();
 
+  // Attempt to autoplay immediately
+  video.play().catch(() => {
+    showPlayButton(); // fallback if autoplay fails
+  });
+
+  // Fallback error message if video doesn't load in time
   setTimeout(() => {
     if (video.readyState < 2) {
       displayErrorMessage(
