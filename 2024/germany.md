@@ -1,5 +1,5 @@
 ---
-layout: def
+layout: default
 title: GERMANY
 author: "Khaliil"
 date: 2024-07-11 10:00:00
