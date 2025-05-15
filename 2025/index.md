@@ -1,5 +1,5 @@
 ---
-layout: def
+layout: default
 title: TOUR
 author: "Khaliil"
 date: 2025-05-02 13:00:00
