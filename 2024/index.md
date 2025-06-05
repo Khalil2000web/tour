@@ -2,7 +2,7 @@
 layout: default
 title: TOUR
 author: "Khaliil"
-published: true
+published: false
 ---
 <div class="h6">2024</div>
 <div class="sgvdd2">
