@@ -39,6 +39,17 @@
 <div class="nav-row footer"><a href="https://khaliil.com/terms-conditions">Terms</a><a href="https://khaliil.com/privacy-policy">Privacy</a><span class="copyright">© 2025</span></div>
 </nav>
 
+{% if page.url contains '/2024/' %}
+<div class="overlay" id="overlay-trip-2024" role="dialog" aria-modal="true" aria-labelledby="overlay-title-trip-2024" tabindex="-1" hidden>
+<div class="overlay-content" role="document">
+<h3 id="overlay-title-trip-2024">2024 TOUR CREDITS</h3>
+<p>🇫🇷🇩🇪🇨🇭 This trip through France, Germany, and Switzerland was fully documented and visually narrated by Khaliil. Every photo and video featured on this page was personally captured, selected, and edited with attention to detail and authenticity. From scenic landscapes to candid street moments, the media reflects a personal perspective and creative vision shaped entirely by Khaliil’s lens.</p>
+</div>
+<button class="close-overlay" aria-label="Close credits overlay"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/></svg>
+</button>
+</div>
+{% endif %}
+
 {{ content }}
 
 
