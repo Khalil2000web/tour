@@ -10,9 +10,8 @@ excerpt: "A page of my 2024 iii travels, SWITZERLAND 2024"
 published: true
 ---
 <div class="g4">
-<a href="/" style="text-align: left;">3.</a>
-<a href="/" style="text-align: left;">SWITZERLAND</a>
-<a href="/" style="text-align: right;">2024</a>
+<div class="first"><button class="credits-btn" data-overlay="trip-2024" aria-haspopup="dialog" aria-controls="overlay-trip-2024" aria-label="Open trip credits">CREDITS</button></div>
+<div class="sec"><a href="/">3.</a><a href="/">SWITZERLAND</a><a href="/">2024</a></div>
 </div>
 <div class="galmain3">
 
