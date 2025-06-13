@@ -11,9 +11,8 @@ published: true
 ---
 
 <div class="g4">
-<a href="/">2.</a>
-<a href="/">GERMANY</a>
-<a href="/">2024</a>
+<div class="first"><button class="credits-btn" data-overlay="trip-2024" aria-haspopup="dialog" aria-controls="overlay-trip-2024" aria-label="Open trip credits">CREDITS</button></div>
+<div class="sec"><a href="/">2.</a><a href="/">GERMANY</a><a href="/">2024</a></div>
 </div>
 <div class="galmain3">
 <div style="pointer-events: none;"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/germany-media/IMG_9256.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
