@@ -6,6 +6,13 @@ date: 2024-07-11 10:00:00
 last_modified_at: 2025-05-08 10:30:00
 published: true
 ---
+<div class="h6">2025</div>
+<div class="page-grid">
+<a href="/2025" class="card" style="background-image: url('ggggg');"><span>PRAGUE</span></a>
+<a href="/2025/" class="card" style="background-image: url('ggggg');"><span>BUDAPEST</span></a>
+<a href="/2025/" class="card" style="background-image: url('gggg');"><span>VIENNA</span></a>
+</div>
+
 <div class="h6">2024</div>
 <div class="page-grid">
 <a href="/2024/france" class="card" style="background-image: url('https://pub-dbfaea2b62d040e1a68ee4949870f6dd.r2.dev/IMG_0874.gif');"><span>FRANCE</span></a>
