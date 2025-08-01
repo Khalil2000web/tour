@@ -9,10 +9,7 @@ tags: [France, Europe, 2024 Travel]
 excerpt: "A page of my 2024 iii travels, SWITZERLAND 2024"
 published: true
 ---
-<div class="g4">
-<div class="first"><button class="credits-btn" data-overlay="trip-2024" aria-haspopup="dialog" aria-controls="overlay-trip-2024" aria-label="Open trip credits">CREDITS</button></div>
-<div class="sec"><a href="/">3.</a><a href="/">SWITZERLAND</a><a href="/">2024</a></div>
-</div>
+<div class="g4"><a href="/">3.</a><a href="/">SWITZERLAND</a><a href="/">2024</a></div>
 <div class="galmain3">
 
 <div style="pointer-events: none;"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9238.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
