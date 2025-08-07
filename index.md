@@ -7,6 +7,16 @@ last_modified_at: 2025-07-31 10:30:00
 published: true
 ---
 <h1 class="title-h1">Tour Archive</h1>
+
+<section class="main20">
+<h2>2025</h2>
+<div class="cards">
+<a href="/2025/prague" class="card"><img src="h" class="card-img" alt="Prague, Hungary"><div class="name">PRAGUE</div></a>
+<a href="/2025/vienna" class="card"><img src="h" class="card-img" alt="Vienna, Austria"><div class="name">VIENNA</div></a>
+<a href="/2025/budapest" class="card"><img src="h" class="card-img" alt="Budapest, "><div class="name">BUDAPEST</div></a>
+</div>
+</section>
+
 <section class="main20">
 <h2>2024</h2>
 <div class="cards">
