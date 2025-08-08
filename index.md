@@ -11,9 +11,9 @@ published: true
 <section class="main20">
 <h2>2025</h2>
 <div class="cards">
-<a href="/2025/prague" class="card"><img src="h" class="card-img" alt="Prague, Hungary"><div class="name">PRAGUE</div></a>
-<a href="/2025/vienna" class="card"><img src="h" class="card-img" alt="Vienna, Austria"><div class="name">VIENNA</div></a>
-<a href="/2025/budapest" class="card"><img src="h" class="card-img" alt="Budapest, "><div class="name">BUDAPEST</div></a>
+<a href="/2025/prague" class="card"><img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_2493.jpeg" class="card-img" alt="Prague, Czechia"><div class="name">PRAGUE</div></a>
+<a href="/2025/vienna" class="card"><img src="https://pub-711e690bbd0d461890cf62bf43a6282b.r2.dev/IMG_1804.jpeg" class="card-img" alt="Vienna, Austria"><div class="name">VIENNA</div></a>
+<a href="/2025/budapest" class="card"><img src="https://pub-62c7562398154a439829645cb8dca3d2.r2.dev/IMG_2313.jpeg" class="card-img" alt="Budapest, Hungary"><div class="name">BUDAPEST</div></a>
 </div>
 </section>
 
