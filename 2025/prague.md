@@ -25,7 +25,7 @@ published: true
 <img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_4919.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
 <img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_2924.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
 <img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_1597.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
-<div class="video-container"><canvas></canvas><video src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/MVI_2540.mov" muted loop autoplay playsinline preload="auto" style="display:none;"></video><div class="spinner"></div><div class="sound-btn"><img src="https://tour.khaliil.com/static/images/icon-mute.svg" alt="Toggle Sound"></div><div class="error-message"></div><div class="play-btn"></div></div>
+<div class="video-container"><canvas></canvas><video src="https://ik.imagekit.io/ntsnw5fxa/MVI_2540.mp4" muted loop autoplay playsinline preload="auto" style="display:none;"></video><div class="spinner"></div><div class="sound-btn"><img src="https://tour.khaliil.com/static/images/icon-mute.svg" alt="Toggle Sound"></div><div class="error-message"></div><div class="play-btn"></div></div>
 <img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_1603.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
 <img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_2617.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
 <img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_3665.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
