@@ -11,17 +11,17 @@ published: true
 <section class="main20">
 <h2>2025</h2>
 <div class="cards">
-<a href="/2025/prague" class="card"><img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_2493.jpeg" class="card-img" alt="Prague, Czechia"><div class="name">PRAGUE</div></a>
-<a href="/2025/vienna" class="card"><img src="https://pub-711e690bbd0d461890cf62bf43a6282b.r2.dev/IMG_1804.jpeg" class="card-img" alt="Vienna, Austria"><div class="name">VIENNA</div></a>
-<a href="/2025/budapest" class="card"><img src="https://pub-62c7562398154a439829645cb8dca3d2.r2.dev/IMG_2313.jpeg" class="card-img" alt="Budapest, Hungary"><div class="name">BUDAPEST</div></a>
+<a href="/2025/prague" class="card"><img src="https://ik.imagekit.io/cx6yav04a/IMG_2493.jpeg" class="card-img" alt="Prague, Czechia"><div class="name">PRAGUE</div></a>
+<a href="/2025/vienna" class="card"><img src="https://ik.imagekit.io/cx6yav04a/IMG_1804.jpeg" class="card-img" alt="Vienna, Austria"><div class="name">VIENNA</div></a>
+<a href="/2025/budapest" class="card"><img src="https://ik.imagekit.io/cx6yav04a/IMG_2313.jpeg" class="card-img" alt="Budapest, Hungary"><div class="name">BUDAPEST</div></a>
 </div>
 </section>
 
 <section class="main20">
 <h2>2024</h2>
 <div class="cards">
-<a href="/2024/france" class="card"><img src="https://pub-dbfaea2b62d040e1a68ee4949870f6dd.r2.dev/IMG_0874.gif" class="card-img" alt="FRANCE"><div class="name">FRANCE</div></a>
-<a href="/2024/germany" class="card"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/germany-media/IMG_9199.jpeg" class="card-img" alt="GERMANY"><div class="name">GERMANY</div></a>
-<a href="/2024/switzerland" class="card"><img src="https://pub-dbfaea2b62d040e1a68ee4949870f6dd.r2.dev/IMG_0877.gif" class="card-img" alt="SWITZERLAND"><div class="name">SWITZERLAND</div></a>
+<a href="/2024/france" class="card"><img src="https://ik.imagekit.io/cx6yav04a/IMG_0874.gif" class="card-img" alt="FRANCE"><div class="name">FRANCE</div></a>
+<a href="/2024/germany" class="card"><img src="https://ik.imagekit.io/cx6yav04a/IMG_9199.jpeg" class="card-img" alt="GERMANY"><div class="name">GERMANY</div></a>
+<a href="/2024/switzerland" class="card"><img src="https://ik.imagekit.io/cx6yav04a/IMG_0877.gif" class="card-img" alt="SWITZERLAND"><div class="name">SWITZERLAND</div></a>
 </div>
 </section>
