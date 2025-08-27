@@ -5,12 +5,9 @@ author: "Khaliil"
 date: 2025-08-01 10:00:00
 last_modified_at: 2025-08-01 10:30:00
 excerpt: "BUDAPEST 2025"
+show_tour_title: true
 published: true
 ---
-<div class="g4">
-<a href="/">BUDAPEST</a>
-<a href="/">2025</a>
-</div>
 <div class="galmain3">
 <img src="https://pub-62c7562398154a439829645cb8dca3d2.r2.dev/IMG_2368.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
 <img src="https://pub-62c7562398154a439829645cb8dca3d2.r2.dev/IMG_4324.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
