@@ -5,6 +5,7 @@ author: "Khaliil"
 date: 2025-08-01 10:00:00
 last_modified_at: 2025-08-01 10:30:00
 excerpt: "VIENNA 2025"
+show_tour_title: true
 published: true
 ---
 <div class="g4"><a href="/">VIENNA</a><a href="/">2025</a></div>
