@@ -20,8 +20,8 @@ published: true
 <section class="main20">
 <h2>2024</h2>
 <div class="cards">
-<a href="/2024/france" class="card"><img src="https://ik.imagekit.io/cx6yav04a/IMG_0874.gif" loading="eager" class="card-img" alt="FRANCE"><div class="name">FRANCE</div></a>
-<a href="/2024/germany" class="card"><img src="https://ik.imagekit.io/cx6yav04a/IMG_9199.jpeg" loading="eager" class="card-img" alt="GERMANY"><div class="name">GERMANY</div></a>
-<a href="/2024/switzerland" class="card"><img src="https://ik.imagekit.io/cx6yav04a/IMG_0877.gif" loading="eager" class="card-img" alt="SWITZERLAND"><div class="name">SWITZERLAND</div></a>
+<a href="/" class="card"><img src="https://ik.imagekit.io/cx6yav04a/IMG_0874.gif" loading="eager" class="card-img" alt="FRANCE"><div class="name">FRANCE</div></a>
+<a href="/" class="card"><img src="https://ik.imagekit.io/cx6yav04a/IMG_9199.jpeg" loading="eager" class="card-img" alt="GERMANY"><div class="name">GERMANY</div></a>
+<a href="/" class="card"><img src="https://ik.imagekit.io/cx6yav04a/IMG_0877.gif" loading="eager" class="card-img" alt="SWITZERLAND"><div class="name">SWITZERLAND</div></a>
 </div>
 </section>
