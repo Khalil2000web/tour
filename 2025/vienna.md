@@ -3,13 +3,10 @@ layout: default
 title: VIENNA
 author: "Khaliil"
 date: 2025-08-01 10:00:00
-last_modified_at: 2025-08-01 10:30:00
 excerpt: "VIENNA 2025"
 show_tour_title: true
 published: true
 ---
-<div class="g4"><a href="/">VIENNA</a><a href="/">2025</a></div>
-
 <div class="galmain3">
 <img src="https://pub-711e690bbd0d461890cf62bf43a6282b.r2.dev/IMG_1655.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
 <img src="https://pub-711e690bbd0d461890cf62bf43a6282b.r2.dev/IMG_1742.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
