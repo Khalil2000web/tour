@@ -2,17 +2,10 @@
 layout: default
 title: PRAGUE
 author: "Khaliil"
-date: 2025-08-01 10:00:00
-last_modified_at: 2025-08-01 10:30:00
-excerpt: "PRAGUE 2025"
+date: 2025-08-01
 published: true
-
 show_tour_title: true
 ---
-<div class="g4">
-<a href="/">PRAGUE</a>
-<a href="/">2025</a>
-</div>
 <div class="galmain3">
 <img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_2473.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
 <img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_2491.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
