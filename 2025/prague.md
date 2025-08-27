@@ -4,6 +4,7 @@ title: PRAGUE
 author: "Khaliil"
 date: 2025-08-01
 published: true
+excerpt: PRAGUE 2025
 show_tour_title: true
 ---
 <div class="galmain3">
