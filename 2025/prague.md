@@ -6,6 +6,8 @@ date: 2025-08-01 10:00:00
 last_modified_at: 2025-08-01 10:30:00
 excerpt: "PRAGUE 2025"
 published: true
+
+show_tour_title: true
 ---
 <div class="g4">
 <a href="/">PRAGUE</a>
