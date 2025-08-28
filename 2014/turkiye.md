@@ -8,10 +8,10 @@ show_tour_title: true
 published: true
 ---
 <div class="galmain3">
+<img src="https://pub-1d34e12f60c64f108921e1253a049c38.r2.dev/IMG_5708.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
 <img src="https://pub-1d34e12f60c64f108921e1253a049c38.r2.dev/IMG_5704.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
 <img src="https://pub-1d34e12f60c64f108921e1253a049c38.r2.dev/IMG_5716.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
 <img src="https://pub-1d34e12f60c64f108921e1253a049c38.r2.dev/IMG_5699.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
-<img src="https://pub-1d34e12f60c64f108921e1253a049c38.r2.dev/IMG_5708.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
 <img src="https://pub-1d34e12f60c64f108921e1253a049c38.r2.dev/IMG_5713.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
 <img src="https://pub-1d34e12f60c64f108921e1253a049c38.r2.dev/IMG_5707.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
 <img src="https://pub-1d34e12f60c64f108921e1253a049c38.r2.dev/IMG_5712.jpeg" class="image" alt="Image" loading="lazy" decoding="async">
