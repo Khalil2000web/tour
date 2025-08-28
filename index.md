@@ -26,10 +26,12 @@ published: true
 </div>
 </section>
 
-
-
-
-
+<section class="main20">
+<h2>2014</h2>
+<div class="cards">
+<a href="/2014/turkiye" class="card"><img src="https://pub-1d34e12f60c64f108921e1253a049c38.r2.dev/IMG_5703.jpeg" loading="eager" class="card-img" alt="ANTALYA"><div class="name">ANTALYA</div></a>
+</div>
+</section>
 
 <section class="main20">
 <h2>2013</h2>
@@ -37,6 +39,4 @@ published: true
 <a href="/2013/antalya" class="card"><img src="https://pub-8e3e2b2b582842958a59dba84262a718.r2.dev/IMG_5693.jpeg" loading="eager" class="card-img" alt="ANTALYA"><div class="name">ANTALYA</div></a>
 </div>
 </section>
-
-
 
