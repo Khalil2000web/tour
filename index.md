@@ -29,7 +29,7 @@ published: true
 <section class="main20">
 <h2>2014</h2>
 <div class="cards">
-<a href="/2014/turkiye" class="card"><img src="https://pub-1d34e12f60c64f108921e1253a049c38.r2.dev/IMG_5703.jpeg" loading="eager" class="card-img" alt="ANTALYA"><div class="name">ANTALYA</div></a>
+<a href="/2014/turkiye" class="card"><img src="https://pub-1d34e12f60c64f108921e1253a049c38.r2.dev/IMG_5703.jpeg" loading="eager" class="card-img" alt="TÜRKİYE"><div class="name">TÜRKİYE</div></a>
 </div>
 </section>
 
