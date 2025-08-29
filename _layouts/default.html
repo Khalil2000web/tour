@@ -59,6 +59,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const wrappers = document.querySelectorAll(".image-wrapper");
+  let scrollPosition = 0;
 
   function muteAllVideos() {
     const videos = document.querySelectorAll(".video-container video");
@@ -71,12 +72,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function lockBodyScroll() {
+    scrollPosition = window.scrollY || window.pageYOffset;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.overflow = "hidden";
+  }
+
+  function unlockBodyScroll() {
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.overflow = "";
+    window.scrollTo(0, scrollPosition);
+  }
+
   wrappers.forEach(wrapper => {
     wrapper.addEventListener("click", () => {
       const img = wrapper.querySelector("img.image");
       if (!img) return;
 
       muteAllVideos();
+      lockBodyScroll();
 
       const overlay = document.createElement("div");
       overlay.classList.add("overlay");
@@ -95,6 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       function closeOverlay() {
         document.body.removeChild(overlay);
+        unlockBodyScroll();
         wrapper.focus();
       }
 
