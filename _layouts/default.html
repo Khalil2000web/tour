@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(overlay);
 
     // lock body height while overlay is open (optional)
-    document.body.style.height = "100%";
+    document.body.style.maxHeight = "100%";
 
     // also allow ESC key to close
     document.addEventListener("keydown", function escHandler(evt) {
