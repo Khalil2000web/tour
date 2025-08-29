@@ -1,16 +1,11 @@
 ---
 layout: default
-title: FRANCE
+title: FRANCE 2024
 author: "Khaliil"
-date: 2024-07-11 10:00:00
-last_modified_at: 2025-05-09 10:30:00
-categories: [2024 trips, France, Europe]
-tags: [France, Europe, 2024 Travel]
-excerpt: "A page of my 2024 iii travels, FRANCE 2024"
+excerpt: "FRANCE 2024"
+show_tour_title: true
 published: true
 ---
-<div class="g4"><a href="/">1.</a><a href="/">FRANCE</a><a href="/">2024</a></div>
-
 <div class="galmain3">
 <div style="pointer-events: none;"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/france2024/IMG_6325.heic" class="image" alt="Image" loading="lazy" decoding="async"></div>
 <div style="pointer-events: none;"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/france2024/IMG_6397.heic" class="image" alt="Image" loading="lazy" decoding="async"></div>
@@ -44,4 +39,7 @@ published: true
 <div style="pointer-events: none;"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/france2024/IMG_6154.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
 <div style="pointer-events: none;"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/france2024/IMG_6140.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
 <div style="pointer-events: none;"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/france2024/IMG_6139.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
+
 </div>
+
+
