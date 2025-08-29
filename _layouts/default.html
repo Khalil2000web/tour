@@ -141,20 +141,6 @@
 {% endif %}
 
 
-<style>
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.95);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999999999999999;
-  overflow: auto;touch-action:pan-x pan-y;
-}
 
 .overlay img {
   max-width: 150%;
@@ -165,22 +151,6 @@
   pointer-events:none;
 }
 
-.close-btn {
-  position: fixed;
-  bottom: 90px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #000;
-  border: 1px solid #fff;
-  color: #fff;
-  padding: 10px 18px;
-  cursor: pointer;
-  border-radius: 0;word-
-  font-size: 16px;
-  text-transform:uppercase;
-  z-index: 10000;
-  font-family: var(--font-main);
-}
 </style>
 
 <style>.page-grid {display: grid;grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));gap: 20px;padding:0 40px;max-width:90%;margin:0 auto;padding-bottom: 120px;}.card {position: relative;display: flex;align-items: center;justify-content: center;height: 200px;text-decoration: none;color: var(--text-color);background-size: cover;background-position: center;border-radius: 0;overflow: hidden;transition: transform 0.2s ease;}.card::before {content: "";position: absolute;inset: 0;background: rgba(0, 0, 0, 0.4);transition: background 0.3s;}.card span {position: relative;font-size: 1.4rem;font-weight: 300;padding: 16px;z-index: 1;text-align: center;text-transform: uppercase;}.card:hover::before {background: rgba(0, 0, 0, 0.6);}
@@ -204,6 +174,7 @@
 
 
 
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const gallery = document.querySelector(".galmain3");
@@ -219,52 +190,50 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  gallery.addEventListener("click", (e) => {
-    // get the element under the click, ignoring pointer-events:none
-    const el = document.elementFromPoint(e.clientX, e.clientY);
-    const img = el && el.classList.contains("image") ? el : null;
-    if (!img) return;
-
-    // mute all videos
-    muteAllVideos();
-
-    // create overlay
-    const overlay = document.createElement("div");
-    overlay.classList.add("overlay");
-
-    const bigImg = document.createElement("img");
-    bigImg.src = img.src;
-    bigImg.alt = img.alt || "Gallery Image";
-
-    const closeBtn = document.createElement("button");
-    closeBtn.classList.add("close-btn");
-    closeBtn.innerText = "Close";
-
-    closeBtn.addEventListener("click", () => {
-      document.body.removeChild(overlay);
-      unlockScroll();
-    });
-
-    overlay.appendChild(bigImg);
-    overlay.appendChild(closeBtn);
-    document.body.appendChild(overlay);
-
-    lockScroll();
-
-    // also allow ESC key to close
-    document.addEventListener("keydown", function escHandler(evt) {
-      if (evt.key === "Escape") {
-        if (document.body.contains(overlay)) {
-          document.body.removeChild(overlay);
-          unlockScroll();
-        }
-        document.removeEventListener("keydown", escHandler);
-      }
-    });
+  // Create overlay once
+  const overlay = document.createElement("div");
+  Object.assign(overlay.style, {
+    position: "fixed",
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "100%",
+    background: "rgba(0,0,0,0.95)",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: "9999999999999999",
+    overflow: "auto",
+    touchAction: "pan-x pan-y"
   });
+  document.body.appendChild(overlay);
 
-  // prevent background scroll while overlay is open
+  const overlayContent = document.createElement("div");
+  overlayContent.style.position = "relative";
+  overlay.appendChild(overlayContent);
+
+  const closeBtn = document.createElement("button");
+  closeBtn.innerText = "Close";
+  Object.assign(closeBtn.style, {
+    position: "fixed",
+    bottom: "90px",
+    left: "50%",
+    transform: "translateX(-50%)",
+    background: "#000",
+    border: "1px solid #fff",
+    color: "#fff",
+    padding: "10px 18px",
+    cursor: "pointer",
+    borderRadius: "0",
+    fontSize: "16px",
+    textTransform: "uppercase",
+    zIndex: "10000",
+    fontFamily: "var(--font-main)"
+  });
+  overlay.appendChild(closeBtn);
+
   let scrollY;
+
   function lockScroll() {
     scrollY = window.scrollY;
     document.body.style.position = "fixed";
@@ -282,8 +251,51 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.right = "";
     document.body.style.overflow = "";
     document.body.style.width = "";
-    window.scrollTo(0, scrollY); // restore scroll
+    window.scrollTo(0, scrollY);
   }
+
+  closeBtn.addEventListener("click", () => {
+    overlay.style.display = "none";
+    unlockScroll();
+    const vid = overlayContent.querySelector("video");
+    if (vid) vid.pause();
+  });
+
+  document.addEventListener("keydown", function escHandler(evt) {
+    if (evt.key === "Escape" && overlay.style.display === "flex") {
+      overlay.style.display = "none";
+      unlockScroll();
+      const vid = overlayContent.querySelector("video");
+      if (vid) vid.pause();
+    }
+  });
+
+  gallery.addEventListener("click", (e) => {
+    const el = document.elementFromPoint(e.clientX, e.clientY);
+    if (!el) return;
+    const isImage = el.tagName === "IMG" && el.classList.contains("image");
+    const isVideo = el.tagName === "VIDEO";
+
+    if (!isImage && !isVideo) return;
+
+    muteAllVideos();
+    lockScroll();
+
+    // clear previous content except close button
+    Array.from(overlayContent.children).forEach(c => c.remove());
+
+    let clone;
+    if (isImage) {
+      clone = document.createElement("img");
+      clone.src = el.src;
+      clone.alt = el.alt || "Gallery Image";
+      clone.style.maxWidth = "1500%";
+      clone.style.maxHeight = "1500%";
+    }
+
+    overlayContent.appendChild(clone);
+    overlay.style.display = "flex";
+  });
 });
 </script>
 
