@@ -1,16 +1,11 @@
 ---
 layout: default
-title: GERMANY
+title: GERMANY 2024
 author: "Khaliil"
-date: 2024-07-11 10:00:00
-last_modified_at: 2025-05-13 10:30:00
-categories: [2024 trips, Germany, Europe]
-tags: [Germany, Europe, 2024 Travel]
-excerpt: "A page of my 2024 iii travels, GERMANY 2024"
+excerpt: "GERMANY 2024"
+show_tour_title: true
 published: true
 ---
-<div class="g4"><a href="/">2.</a><a href="/">GERMANY</a><a href="/">2024</a></div>
-
 <div class="galmain3">
 <div style="pointer-events: none;"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/germany-media/IMG_9256.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
 <div style="pointer-events: none;"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/germany-media/GMP_U2F2ZUdNQVgwMQ%3D%3D.gif" class="image" alt="Image" loading="lazy" decoding="async"></div>
@@ -33,4 +28,5 @@ published: true
 <div style="pointer-events: none;"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/germany-media/photo-output.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
 <div style="pointer-events: none;"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/germany-media/IMG_6497.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
 <div style="pointer-events: none;"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/germany-media/IMG_6493.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
+
 </div>
