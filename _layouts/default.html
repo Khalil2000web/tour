@@ -160,6 +160,7 @@
   object-fit: contain;
   margin: auto;
   display: block;
+  pointer-events:none;
 }
 
 .close-btn {
@@ -205,7 +206,7 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const images = document.querySelectorAll(".galmain3 img.image");
+  const gallery = document.querySelector(".galmain3");
 
   function muteAllVideos() {
     const videos = document.querySelectorAll(".video-container video");
@@ -218,30 +219,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  images.forEach(img => {
-    img.addEventListener("click", () => {
-      // mute all videos
-      muteAllVideos();
+  gallery.addEventListener("click", (e) => {
+    const img = e.target.closest("img.image"); 
+    if (!img) return; // only react if it's one of your images
 
-      // create overlay
-      const overlay = document.createElement("div");
-      overlay.classList.add("overlay");
+    // mute all videos
+    muteAllVideos();
 
-      const bigImg = document.createElement("img");
-      bigImg.src = img.src;
-      bigImg.alt = img.alt || "Gallery Image";
+    // create overlay
+    const overlay = document.createElement("div");
+    overlay.classList.add("overlay");
 
-      const closeBtn = document.createElement("button");
-      closeBtn.classList.add("close-btn");
-      closeBtn.innerText = "Close";
+    const bigImg = document.createElement("img");
+    bigImg.src = img.src;
+    bigImg.alt = img.alt || "Gallery Image";
 
-      closeBtn.addEventListener("click", () => {
-        document.body.removeChild(overlay);
-      });
+    const closeBtn = document.createElement("button");
+    closeBtn.classList.add("close-btn");
+    closeBtn.innerText = "Close";
 
-      overlay.appendChild(bigImg);
-      overlay.appendChild(closeBtn);
-      document.body.appendChild(overlay);
+    closeBtn.addEventListener("click", () => {
+      document.body.removeChild(overlay);
+    });
+
+    overlay.appendChild(bigImg);
+    overlay.appendChild(closeBtn);
+    document.body.appendChild(overlay);
+
+    // also allow ESC key to close
+    document.addEventListener("keydown", function escHandler(evt) {
+      if (evt.key === "Escape") {
+        if (document.body.contains(overlay)) {
+          document.body.removeChild(overlay);
+        }
+        document.removeEventListener("keydown", escHandler);
+      }
     });
   });
 });
