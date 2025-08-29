@@ -157,7 +157,7 @@
 }
 
 .overlay img {
-  max-width: 150%;height: 150vh;
+  max-width: 150%;
   max-height: 150vh;
   object-fit: contain;
   margin: auto;
@@ -170,14 +170,16 @@
   bottom: 90px;
   left: 50%;
   transform: translateX(-50%);
-  background: transparent;
+  background: #000;
   border: 1px solid #fff;
   color: #fff;
   padding: 10px 18px;
   cursor: pointer;
   border-radius: 0;word-
-  font-size: 15px;text-transform:uppercase;
-  z-index: 10000;font-family: var(--font-main);
+  font-size: 16px;
+  text-transform:uppercase;
+  z-index: 10000;
+  font-family: var(--font-main);
 }
 </style>
 
@@ -238,49 +240,50 @@ document.addEventListener("DOMContentLoaded", () => {
     closeBtn.classList.add("close-btn");
     closeBtn.innerText = "Close";
 
-    // lock body scroll
-    const scrollY = window.scrollY;
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${scrollY}px`;
-    document.body.style.left = "0";
-    document.body.style.right = "0";
-    document.body.style.overflow = "hidden";
-    document.body.style.width = "100%";
-
     closeBtn.addEventListener("click", () => {
       document.body.removeChild(overlay);
-      // restore scroll
-      document.body.style.position = "";
-      document.body.style.top = "";
-      document.body.style.left = "";
-      document.body.style.right = "";
-      document.body.style.overflow = "";
-      document.body.style.width = "";
-      window.scrollTo(0, scrollY);
+      unlockScroll();
     });
 
     overlay.appendChild(bigImg);
     overlay.appendChild(closeBtn);
     document.body.appendChild(overlay);
 
+    lockScroll();
+
     // also allow ESC key to close
     document.addEventListener("keydown", function escHandler(evt) {
       if (evt.key === "Escape") {
         if (document.body.contains(overlay)) {
           document.body.removeChild(overlay);
-          // restore scroll
-          document.body.style.position = "";
-          document.body.style.top = "";
-          document.body.style.left = "";
-          document.body.style.right = "";
-          document.body.style.overflow = "";
-          document.body.style.width = "";
-          window.scrollTo(0, scrollY);
+          unlockScroll();
         }
         document.removeEventListener("keydown", escHandler);
       }
     });
   });
+
+  // prevent background scroll while overlay is open
+  let scrollY;
+  function lockScroll() {
+    scrollY = window.scrollY;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.overflow = "hidden";
+    document.body.style.width = "100%";
+  }
+
+  function unlockScroll() {
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.overflow = "";
+    document.body.style.width = "";
+    window.scrollTo(0, scrollY); // restore scroll
+  }
 });
 </script>
 
