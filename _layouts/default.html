@@ -201,6 +201,7 @@
 </footer>
 
 
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const gallery = document.querySelector(".galmain3");
@@ -217,22 +218,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   gallery.addEventListener("click", (e) => {
-    // get mouse position relative to page
-    const x = e.clientX + window.scrollX;
-    const y = e.clientY + window.scrollY;
-
-    // find the first image whose bounding box contains this point
-    const imgs = [...gallery.querySelectorAll(".image")];
-    const img = imgs.find(im => {
-      const rect = im.getBoundingClientRect();
-      const top = rect.top + window.scrollY;
-      const bottom = rect.bottom + window.scrollY;
-      const left = rect.left + window.scrollX;
-      const right = rect.right + window.scrollX;
-      return x >= left && x <= right && y >= top && y <= bottom;
-    });
-
-    if (!img) return; // not clicked on an image area
+    // get the element under the click, ignoring pointer-events:none
+    const el = document.elementFromPoint(e.clientX, e.clientY);
+    const img = el && el.classList.contains("image") ? el : null;
+    if (!img) return;
 
     // mute all videos
     muteAllVideos();
@@ -249,24 +238,44 @@ document.addEventListener("DOMContentLoaded", () => {
     closeBtn.classList.add("close-btn");
     closeBtn.innerText = "Close";
 
+    // lock body scroll
+    const scrollY = window.scrollY;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.overflow = "hidden";
+    document.body.style.width = "100%";
+
     closeBtn.addEventListener("click", () => {
       document.body.removeChild(overlay);
-      document.body.style.height = "";
+      // restore scroll
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
+      document.body.style.overflow = "";
+      document.body.style.width = "";
+      window.scrollTo(0, scrollY);
     });
 
     overlay.appendChild(bigImg);
     overlay.appendChild(closeBtn);
     document.body.appendChild(overlay);
 
-    // lock body height while overlay is open (optional)
-    document.body.style.maxHeight = "100%";
-
     // also allow ESC key to close
     document.addEventListener("keydown", function escHandler(evt) {
       if (evt.key === "Escape") {
         if (document.body.contains(overlay)) {
           document.body.removeChild(overlay);
-          document.body.style.height = "";
+          // restore scroll
+          document.body.style.position = "";
+          document.body.style.top = "";
+          document.body.style.left = "";
+          document.body.style.right = "";
+          document.body.style.overflow = "";
+          document.body.style.width = "";
+          window.scrollTo(0, scrollY);
         }
         document.removeEventListener("keydown", escHandler);
       }
