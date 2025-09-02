@@ -4,7 +4,7 @@ title: TOUR
 author: "Khaliil"
 date: 2024-07-11 10:00:00
 last_modified_at: 2025-07-31 10:30:00
-published: true
+published: false
 ---
 <h1 class="title-h1">Tour Archive</h1>
 
