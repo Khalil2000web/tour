@@ -1,9 +1,9 @@
 /* styles/Index.module.css */
 
-body {
+.main {
   padding-top: 40px;
   padding-bottom: 60px;
-}
+  }
 
 .titleH1 {
   text-align: center;
