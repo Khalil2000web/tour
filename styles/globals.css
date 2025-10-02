@@ -162,20 +162,6 @@ body,html {
 #nbold {pointer-events:none;font-family:var(--font-main-bold);letter-spacing: -2px;}.nav-links a:last-child {margin-left: auto;}
 
 
-
-
-
-.indexmain {
-  padding-top: 40px;
-  padding-bottom: 60px;
-}
-
-/* Disable the home link */
-.nav-links a[href="/"] {
-  pointer-events: none;
-  text-decoration: line-through;
-}
-
 /* Main title */
 .title-h1 {
   text-align: center;
