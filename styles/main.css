@@ -1,9 +1,4 @@
-@font-face {
-  font-family: 'MyFont';
-  src: url('/fonts/BBManualMonoProTX.22d272fc 2.ttf') format('ttf');
-  font-weight: 400;
-  font-style: normal;
-}
+@font-face {font-family: 'BB Manual Mono Regular';src: url('https://khaliil.com/static/fonts/BBManualMonoProTX.22d272fc.ttf');}@font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://khaliil.com/static/fonts/BBManualMonoProTX-SemiBold.otf');}
 
 * {padding:0;margin:0;box-sizing: border-box;font-family: 'BB Manual Mono Regular', sans-serif;}
 
