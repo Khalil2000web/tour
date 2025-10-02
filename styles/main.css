@@ -5,11 +5,11 @@
   font-style: normal;
 }
 
-* {padding:0;margin:0;box-sizing: border-box;font-family: 'BB Manual Mono Regula', sans-serif;}
+* {padding:0;margin:0;box-sizing: border-box;font-family: 'BB Manual Mono Regular', sans-serif;}
 
 body,html {
-  font-family: 'BB Manual Mono Regula', sans-serif;
-  background-color:#000;
+  font-family: 'BB Manual Mono Regular', sans-serif;
+  background-color:#000;text-transform:uppercase;
   color:#fff;
   padding:0;
   margin:0;
