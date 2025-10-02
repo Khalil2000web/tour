@@ -3,7 +3,6 @@ import styles from '../styles/Index.module.css';
 
 export default function Home() {
   return (
-    <main>
       <h1 className={styles.titleH1}>Tour Archive</h1>
 
       <section className={styles.main20}>
@@ -71,6 +70,6 @@ export default function Home() {
           </a>
         </div>
       </section>
-    </main>
+
   );
 }
