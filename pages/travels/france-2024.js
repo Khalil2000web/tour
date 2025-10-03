@@ -1,5 +1,4 @@
-import TravelsLayout from "./TravelsLayout";
-import '../styles/globals.css'
+
 
 export default function ParisPage() {
   return (
