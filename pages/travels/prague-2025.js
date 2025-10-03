@@ -45,7 +45,6 @@ export default function Parge2025Page() {
         <div className="image-wrapper"><img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_4813.jpeg" className="image" alt="Image 13" loading="lazy" decoding="async" /></div>
         <div className="image-wrapper"><img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_3674.jpeg" className="image" alt="Image 14" loading="lazy" decoding="async" /></div>
         <div className="image-wrapper"><img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_4962.jpeg" className="image" alt="Image 15" loading="lazy" decoding="async" /></div>
-        <div className="image-wrapper"><img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_2924.jpeg" className="image" alt="Image 16" loading="lazy" decoding="async" /></div>
         <div className="image-wrapper"><img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_4924.jpeg" className="image" alt="Image 17" loading="lazy" decoding="async" /></div>
         <div className="image-wrapper"><img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_3669.jpeg" className="image" alt="Image 18" loading="lazy" decoding="async" /></div>
         <div className="image-wrapper"><img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_3680.jpeg" className="image" alt="Image 19" loading="lazy" decoding="async" /></div>
