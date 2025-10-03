@@ -9,7 +9,7 @@ export default function Home() {
       <section className="main20">
         <h2>2025</h2>
         <div className="cards">
-          <Link href="/travels/prague-2026" className="card">
+          <Link href="/travels/prague-2025" className="card">
             <img src="https://ik.imagekit.io/cx6yav04a/IMG_2493.jpeg" loading="eager" className="card-img" alt="Prague, Czechia" />
             <div className="name">PRAGUE</div>
           </Link>
