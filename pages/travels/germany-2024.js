@@ -28,7 +28,7 @@ export default function Germany2024Page() {
       </Head>
       
       <div className="travel-title-overlay">
-  <h1>VIENNA 2025</h1>
+  <h1>GERMANY 2024</h1>
 </div>
         
         
