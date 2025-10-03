@@ -141,7 +141,7 @@
 }
 
 
-@font-face {font-family: 'BB Manual Mono Regular';src: url('https://khaliil.com/static/fonts/BBManualMonoProTX.22d272fc.ttf');}
+@font-face {font-family: 'BB Manual Mono Regular';src: url('/public/fonts/BBManualMonoProTX.22d272fc.ttf');}
 @font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://khaliil.com/static/fonts/BBManualMonoProTX-SemiBold.otf');}
 * {padding:0;margin:0;box-sizing: border-box;}
 
@@ -162,6 +162,7 @@ body,html {font-family: 'BB Manual Mono Regular', sans-serif;background-color:#0
   text-transform: uppercase;
   overflow-wrap: break-word;
   word-break: break-word;
+  padding-top:50px;
 }
 
 .main20 {
@@ -285,7 +286,6 @@ body,html {font-family: 'BB Manual Mono Regular', sans-serif;background-color:#0
   text-align: center;
   user-select: none;
   -webkit-user-select: none;
-  padding-top:40px;
 }
 
 
