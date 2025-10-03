@@ -25,6 +25,10 @@ export default function Vienna2025Page() {
         <meta name="copyright" content="2025" />
       </Head>
       
+      <div className="travel-title-overlay">
+  <h1>VIENNA 2025</h1>
+</div>
+      
       <div className="galmain3">
         <div className="image-wrapper"><img src="https://pub-711e690bbd0d461890cf62bf43a6282b.r2.dev/IMG_1655.jpeg" className="image" alt="Image 1" loading="lazy" decoding="async" /></div>
         <div className="image-wrapper"><img src="https://pub-711e690bbd0d461890cf62bf43a6282b.r2.dev/IMG_1742.jpeg" className="image" alt="Image 2" loading="lazy" decoding="async" /></div>
