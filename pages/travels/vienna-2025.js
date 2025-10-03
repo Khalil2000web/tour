@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import TravelsLayout from './TravelsLayout.js';
 
 export default function Vienna2025Page() {
