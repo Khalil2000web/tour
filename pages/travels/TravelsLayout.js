@@ -1,4 +1,3 @@
-// /pages/travels/TravelsLayout.js
 import { useEffect } from "react";
 
 export default function TravelsLayout({ children }) {
@@ -13,7 +12,7 @@ export default function TravelsLayout({ children }) {
         if (!video.muted) {
           video.muted = true;
           const icon = video.closest(".video-container")?.querySelector(".sound-btn img");
-          if (icon) icon.src = "https://tour.khaliil.com/static/images/icon-mute.svg";
+          if (icon) icon.src = "https://khaliil.com/static/images/icon-mute.svg";
         }
       });
     }
@@ -47,12 +46,13 @@ export default function TravelsLayout({ children }) {
         bigImg.src = img.src;
         overlay.appendChild(bigImg);
 
-        const closeBtn = document.createElement("button");
-        closeBtn.innerText = "Close";
-        closeBtn.addEventListener("click", () => {
-          document.body.removeChild(overlay);
-          unlockBodyScroll();
-        });
+const closeBtn = document.createElement("button");
+closeBtn.classList.add("close-btn"); // <-- this connects it to your CSS
+closeBtn.innerText = "Close";
+closeBtn.addEventListener("click", () => {
+  document.body.removeChild(overlay);
+  unlockBodyScroll();
+});
 
         overlay.appendChild(closeBtn);
         document.body.appendChild(overlay);
@@ -100,11 +100,11 @@ export default function TravelsLayout({ children }) {
           }
           video.muted = false;
           currentlyUnmutedVideo = video;
-          soundIcon.src = "https://tour.khaliil.com/static/images/icon-volume.svg";
+          soundIcon.src = "https://khaliil.com/static/images/icon-volume.svg";
         } else {
           video.muted = true;
           currentlyUnmutedVideo = null;
-          soundIcon.src = "https://tour.khaliil.com/static/images/icon-mute.svg";
+          soundIcon.src = "https://khaliil.com/static/images/icon-mute.svg";
         }
       });
 
