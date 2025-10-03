@@ -28,7 +28,7 @@ export default function Home() {
       <section className="main20">
         <h2>2024</h2>
         <div className="cards">
-          <Link href="/2024/france" className="card">
+          <Link href="/france-2024" className="card">
             <img src="https://ik.imagekit.io/cx6yav04a/IMG_0874.gif" loading="eager" className="card-img" alt="FRANCE" />
             <div className="name">FRANCE</div>
           </Link>
