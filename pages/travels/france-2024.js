@@ -1,5 +1,4 @@
 import TravelsLayout from './TravelsLayout.js';
-import '../styles/globals.css';
 
 export default function France2024Page() {
   return (
