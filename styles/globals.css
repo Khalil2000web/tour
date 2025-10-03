@@ -140,10 +140,9 @@
   --card-border-radius: var(--border-radius-medium);
 }
 
-
 @font-face {font-family: 'BB Manual Mono Regular';src: url('/fonts/BBManualMonoProTX.22d272fc.ttf');font-weight: normal;font-style: normal;}
 @font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://khaliil.com/static/fonts/BBManualMonoProTX-SemiBold.otf');}
-* {padding:0;margin:0;box-sizing: border-box;}
+* {padding:0;margin:0;box-sizing: border-box;font-family: 'BB Manual Mono Regular', sans-serif;}
 
 body,html {font-family: 'BB Manual Mono Regular', sans-serif;background-color:#000;text-transform:uppercase;color:var(--text-color);webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%;-text-size-adjust: 100%;}
 
