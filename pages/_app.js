@@ -6,7 +6,8 @@ export default function App({ Component, pageProps }) {
       <header className="navbar">
         <div className="nav-links">
           <a href="https://khaliil.com/">Home</a>
-          <a href="https://tour.khaliil.com/">Tour</a>
+         <a href="https://khaliil.com/about">About</a>
+          <a href="/">Tour</a>
           <a id="nbold">K//</a>
         </div>
       </header>
