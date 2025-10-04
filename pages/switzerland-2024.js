@@ -5,12 +5,16 @@ export default function Switzerland2024Page() {
   return (
     <TravelsLayout>
       <Head>
-        <title>Switzerland 2024</title>
+        <title>SWITZERLAND 2024</title>
         <meta name="description" content="Gallery of Switzerland 2024 tour" />
-        <meta name="url" content="https://www.khaliil.com/switzerland-2024" />
+        <meta name="url" content="https://khaliil.com" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Switzerland 2024" />
       </Head>
+      
+            <div className="travel-title-overlay">
+  <h1>SWITZERLAND 2024</h1>
+</div>
 
       <div className="galmain3">
 
