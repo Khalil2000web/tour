@@ -8,6 +8,24 @@ export default function Test() {
         muteIcon="/icons/icon-mute.svg"
         unmuteIcon="/icons/icon-volume.svg"
       />
+    
+          <CustomVideo
+        src="/videos/IMG_7388.mp4"
+        muteIcon="/icons/icon-mute.svg"
+        unmuteIcon="/icons/icon-volume.svg"
+      />
+    
+          <CustomVideo
+        src="/videos/IMG_7388.mp4"
+        muteIcon="/icons/icon-mute.svg"
+        unmuteIcon="/icons/icon-volume.svg"
+      />
+    
+          <CustomVideo
+        src="/videos/IMG_7388.mp4"
+        muteIcon="/icons/icon-mute.svg"
+        unmuteIcon="/icons/icon-volume.svg"
+      />
     </div>
   );
 }
