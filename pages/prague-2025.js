@@ -52,16 +52,7 @@ export default function Parge2025Page() {
         <div className="image-wrapper"><img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_2507.jpeg" className="image" alt="Image 21" loading="lazy" decoding="async" /></div>
         <div className="image-wrapper"><img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_4919.jpeg" className="image" alt="Image 22" loading="lazy" decoding="async" /></div>
         <div className="image-wrapper"><img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_4962.jpeg" className="image" alt="Image 23" loading="lazy" decoding="async" /></div>
-        <div className="video-container">
-          <canvas></canvas>
-          <video src="https://ik.imagekit.io/ntsnw5fxa/MVI_2540.mp4" muted loop autoPlay playsInline preload="auto" style={{ display: 'none' }}></video>
-          <div className="spinner"></div>
-          <div className="sound-btn">
-            <img src="https://tour.khaliil.com/static/images/icon-mute.svg" alt="Toggle Sound" />
-          </div>
-          <div className="error-message"></div>
-          <div className="play-btn"></div>
-        </div>
+        <CustomVideo src="https://ik.imagekit.io/ntsnw5fxa/MVI_2540.mp4" muteIcon="/icons/icon-mute.svg" unmuteIcon="/icons/icon-volume.svg" />
         <div className="image-wrapper"><img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_3672.jpeg" className="image" alt="Image 24" loading="lazy" decoding="async" /></div>
         <div className="image-wrapper"><img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_1603.jpeg" className="image" alt="Image 25" loading="lazy" decoding="async" /></div>
         <div className="image-wrapper"><img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_2625.jpeg" className="image" alt="Image 26" loading="lazy" decoding="async" /></div>
