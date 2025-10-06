@@ -1,28 +1,28 @@
 import { useRef, useState, useEffect } from "react";
 
-let currentlyUnmutedVideo = null; // global to manage multiple videos
+// global to manage one unmuted video at a time
+let currentlyUnmutedVideo = null;
 
 export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
   const containerRef = useRef(null);
   const videoRef = useRef(null);
+
   const [isMuted, setIsMuted] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  // Play / pause toggle
+  // Toggle play/pause
   const togglePlay = () => {
     if (!videoRef.current) return;
     if (videoRef.current.paused) {
       videoRef.current.play();
-      setIsPlaying(true);
     } else {
       videoRef.current.pause();
-      setIsPlaying(false);
     }
   };
 
-  // Mute / unmute toggle
+  // Toggle mute/unmute
   const toggleMute = () => {
     if (!videoRef.current) return;
     if (isMuted) {
@@ -35,12 +35,12 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
       setIsMuted(false);
     } else {
       videoRef.current.muted = true;
-      currentlyUnmutedVideo = null;
+      if (currentlyUnmutedVideo === videoRef.current) currentlyUnmutedVideo = null;
       setIsMuted(true);
     }
   };
 
-  // Retry loading on error
+  // Retry video load
   const retryLoad = () => {
     setError(false);
     setLoading(true);
@@ -48,7 +48,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
     videoRef.current.play().catch(() => setIsPlaying(false));
   };
 
-  // Handle IntersectionObserver to mute video fully out of frame
+  // IntersectionObserver: mute if fully out of frame
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -60,17 +60,29 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           }
         }
       },
-      { threshold: 1 } // fully out of view
+      { threshold: 1 }
     );
 
     if (containerRef.current) observer.observe(containerRef.current);
     return () => observer.disconnect();
   }, []);
 
-  // Video event handlers to sync state
+  // Keep state synced with actual video properties (muted/paused)
+  useEffect(() => {
+    const interval = requestAnimationFrame(function sync() {
+      if (videoRef.current) {
+        setIsMuted(videoRef.current.muted);
+        setIsPlaying(!videoRef.current.paused);
+      }
+      requestAnimationFrame(sync);
+    });
+    return () => cancelAnimationFrame(interval);
+  }, []);
+
+  // Video event handlers
   const handlePlay = () => {
-    setIsPlaying(true);
     setLoading(false);
+    setIsPlaying(true);
   };
   const handlePause = () => setIsPlaying(false);
   const handleWaiting = () => setLoading(true);
@@ -104,15 +116,17 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
         </div>
       )}
 
+      {/* Mute/Unmute Button */}
       {!error && (
         <button className="sound-btn" onClick={toggleMute}>
           <img src={isMuted ? muteIcon : unmuteIcon} alt="sound" />
         </button>
       )}
 
+      {/* Play Button */}
       {!isPlaying && !error && (
         <button className="play-btn" onClick={togglePlay}>
-          Play
+          ▶
         </button>
       )}
 
@@ -127,8 +141,8 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           z-index: 10;
         }
         .sound-btn img {
-          width: 20px;
-          height: auto;
+          width: 24px;
+          height: 24px;
         }
         .play-btn {
           position: absolute;
@@ -138,7 +152,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           background: rgba(0,0,0,0.5);
           border: none;
           color: white;
-          font-size: 30px;
+          font-size: 40px;
           z-index: 10;
           padding: 10px 20px;
           cursor: pointer;
