@@ -122,6 +122,9 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           border: none;
           cursor: pointer;
         }
+        .sound-btn img {
+        width:17px;height:auto;
+        }
         .play-btn {
           position: absolute;
           top: 50%;
