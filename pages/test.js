@@ -6,7 +6,7 @@ export default function Test() {
     <div style={{ padding: "50px" }}>
       <h1>My Custom Video Player</h1>
       <CustomVideo
-        src="http://www.example.com/waterfall-video.mp4" // make sure .mp4
+        src="/videos/IMG_7387.mp4"
         muteIcon="/icons/mute.svg"
         unmuteIcon="/icons/unmute.svg"
       />
