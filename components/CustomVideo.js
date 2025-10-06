@@ -138,7 +138,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
         .video-container {
           position: relative;
           width: 100%;
-          min-height: 250px;
+          min-height: 300px;
           background: black;
         }
 
@@ -152,7 +152,9 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           z-index: 10;
         }
         .sound-btn img {
-          width: 22px;
+          width: 24px;
+          user-select:none;
+          user-drag:none
         }
 
         .play-btn {
