@@ -21,7 +21,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
     }
   };
 
-  // Toggle mute (only one unmuted video at a time)
+
   const toggleMute = () => {
     if (!videoRef.current) return;
     if (isMuted) {
@@ -116,14 +116,14 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
       <style jsx>{`
         .sound-btn {
           position: absolute;
-          top: 10px;
-          right: 10px;
+          top: 25px;
+          right: 25px;
           background: none;
           border: none;
           cursor: pointer;
         }
         .sound-btn img {
-        width:17px;height:auto;
+        width:20px;height:auto;
         }
         .play-btn {
           position: absolute;
@@ -132,7 +132,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           transform: translate(-50%, -50%);
           background: rgba(0,0,0,0.5);
           border: none;
-          color: white;
+          color: white;font-size:30px;z-index:10;
           padding: 10px 20px;
           cursor: pointer;
           border-radius: 5px;
@@ -140,14 +140,9 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
         .spinner {
           position: absolute;
           top: 50%;
-          left: 50%;
+          left: 50%;margin:-30px 0 0 -30px;
           transform: translate(-50%, -50%);
-          border: 4px solid rgba(255, 255, 255, 0.3);
-          border-top: 4px solid white;
-          border-radius: 50%;
-          width: 40px;
-          height: 40px;
-          animation: spin 1s linear infinite;
+          z-index:5;user-select:none;-webkit-user-select:none;width:55px;height:55px;border-radius:50%;border:10px solid #4682B4;opacity:0.8;animation:spinner-bulqg1 0.8s infinite linear alternate,spinner-oaa3wk 1.6s infinite linear;margin:-30px 0 0 -30px;
         }
         .error-overlay {
           position: absolute;
@@ -167,10 +162,8 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           padding: 5px 10px;
           cursor: pointer;
         }
-        @keyframes spin {
-          0% { transform: translate(-50%, -50%) rotate(0deg); }
-          100% { transform: translate(-50%, -50%) rotate(360deg); }
-        }
+        @keyframes spinner-bulqg1{0%{clip-path:polygon(50% 50%,0 0,50% 0%,50% 0%,50% 0%,50% 0%,50% 0%);}12.5%{clip-path:polygon(50% 50%,0 0,50% 0%,100% 0%,100% 0%,100% 0%,100% 0%);}25%{clip-path:polygon(50% 50%,0 0,50% 0%,100% 0%,100% 100%,100% 100%,100% 100%);}50%{clip-path:polygon(50% 50%,0 0,50% 0%,100% 0%,100% 100%,50% 100%,0% 100%);}62.5%{clip-path:polygon(50% 50%,100% 0,100% 0%,100% 0%,100% 100%,50% 100%,0% 100%);}75%{clip-path:polygon(50% 50%,100% 100%,100% 100%,100% 100%,100% 100%,50% 100%,0% 100%);}100%{clip-path:polygon(50% 50%,50% 100%,50% 100%,50% 100%,50% 100%,50% 100%,0% 100%);}}@keyframes spinner-oaa3wk{0%{transform:scaleY(1) rotate(0deg);}49.99%{transform:scaleY(1) rotate(135deg);}50%{transform:scaleY(-1) rotate(0deg);}100%{transform:scaleY(-1) rotate(-135deg);}}
+
       `}</style>
     </div>
   );
