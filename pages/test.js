@@ -16,7 +16,7 @@ export default function Test() {
       />
     
           <CustomVideo
-        src="/videos/IMG_7388.mp4"
+        src="/videos/IMG_738.mp4"
         muteIcon="/icons/icon-mute.svg"
         unmuteIcon="/icons/icon-volume.svg"
       />
