@@ -26,7 +26,6 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
   const toggleMute = () => {
     if (!videoRef.current) return;
     if (isMuted) {
-      // mute previous unmuted video immediately
       if (currentlyUnmutedVideo && currentlyUnmutedVideo !== videoRef.current) {
         currentlyUnmutedVideo.muted = true;
       }
@@ -67,16 +66,16 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
     return () => observer.disconnect();
   }, []);
 
-  // Keep state synced with actual video properties (muted/paused)
+  // Keep state synced with actual video properties
   useEffect(() => {
-    const interval = requestAnimationFrame(function sync() {
+    const frame = requestAnimationFrame(function sync() {
       if (videoRef.current) {
         setIsMuted(videoRef.current.muted);
         setIsPlaying(!videoRef.current.paused);
       }
       requestAnimationFrame(sync);
     });
-    return () => cancelAnimationFrame(interval);
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   // Video event handlers
@@ -92,7 +91,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
   };
 
   return (
-    <div ref={containerRef} className="video-container" style={{ position: "relative" }}>
+    <div ref={containerRef} className="video-container">
       {loading && !error && <div className="spinner"></div>}
 
       <video
@@ -106,7 +105,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
         onPause={handlePause}
         onWaiting={handleWaiting}
         onError={handleError}
-        style={{ width: "100%", display: error ? "none" : "block" }}
+        style={{ width: "100%", height: "100%", display: error ? "none" : "block", objectFit: "cover" }}
       />
 
       {error && (
@@ -116,14 +115,12 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
         </div>
       )}
 
-      {/* Mute/Unmute Button */}
       {!error && (
         <button className="sound-btn" onClick={toggleMute}>
           <img src={isMuted ? muteIcon : unmuteIcon} alt="sound" />
         </button>
       )}
 
-      {/* Play Button */}
       {!isPlaying && !error && (
         <button className="play-btn" onClick={togglePlay}>
           ▶
@@ -131,6 +128,13 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
       )}
 
       <style jsx>{`
+        .video-container {
+          position: relative;
+          width: 100%;
+          min-height: 300px; /* keep container size */
+          background: black;
+        }
+
         .sound-btn {
           position: absolute;
           top: 25px;
@@ -144,6 +148,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           width: 24px;
           height: 24px;
         }
+
         .play-btn {
           position: absolute;
           top: 50%;
@@ -158,6 +163,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           cursor: pointer;
           border-radius: 5px;
         }
+
         .spinner {
           position: absolute;
           top: 50%;
@@ -176,18 +182,18 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           0% { transform: rotate(0deg); }
           100% { transform: rotate(360deg); }
         }
+
         .error-overlay {
           position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(0,0,0,0.7);
+          top: 20px;
+          left: 50%;
+          transform: translateX(-50%);
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          justify-content: flex-start;
           align-items: center;
           color: white;
+          z-index: 20;
         }
         .error-overlay button {
           margin-top: 10px;
