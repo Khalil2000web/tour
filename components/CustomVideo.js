@@ -1,15 +1,16 @@
 import { useRef, useState, useEffect } from "react";
 
+let currentlyUnmutedVideo = null; // global to manage multiple videos
+
 export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
+  const containerRef = useRef(null);
   const videoRef = useRef(null);
   const [isMuted, setIsMuted] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  const currentlyUnmutedVideo = useRef(null);
-
-  // Toggle play
+  // Play / pause toggle
   const togglePlay = () => {
     if (!videoRef.current) return;
     if (videoRef.current.paused) {
@@ -21,24 +22,25 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
     }
   };
 
-
+  // Mute / unmute toggle
   const toggleMute = () => {
     if (!videoRef.current) return;
     if (isMuted) {
-      if (currentlyUnmutedVideo.current && currentlyUnmutedVideo.current !== videoRef.current) {
-        currentlyUnmutedVideo.current.muted = true;
+      // mute previous unmuted video immediately
+      if (currentlyUnmutedVideo && currentlyUnmutedVideo !== videoRef.current) {
+        currentlyUnmutedVideo.muted = true;
       }
       videoRef.current.muted = false;
-      currentlyUnmutedVideo.current = videoRef.current;
+      currentlyUnmutedVideo = videoRef.current;
       setIsMuted(false);
     } else {
       videoRef.current.muted = true;
-      currentlyUnmutedVideo.current = null;
+      currentlyUnmutedVideo = null;
       setIsMuted(true);
     }
   };
 
-  // Retry video load
+  // Retry loading on error
   const retryLoad = () => {
     setError(false);
     setLoading(true);
@@ -46,30 +48,41 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
     videoRef.current.play().catch(() => setIsPlaying(false));
   };
 
-  // IntersectionObserver to auto-mute when out of viewport
+  // Handle IntersectionObserver to mute video fully out of frame
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (!entry.isIntersecting && !videoRef.current.muted) {
-          videoRef.current.muted = true;
-          setIsMuted(true);
-          currentlyUnmutedVideo.current = null;
+        if (!entry.isIntersecting) {
+          if (videoRef.current && !videoRef.current.muted) {
+            videoRef.current.muted = true;
+            setIsMuted(true);
+            if (currentlyUnmutedVideo === videoRef.current) currentlyUnmutedVideo = null;
+          }
         }
       },
-      { threshold: 0.5 }
+      { threshold: 1 } // fully out of view
     );
 
-    if (videoRef.current) observer.observe(videoRef.current);
-
+    if (containerRef.current) observer.observe(containerRef.current);
     return () => observer.disconnect();
   }, []);
 
+  // Video event handlers to sync state
+  const handlePlay = () => {
+    setIsPlaying(true);
+    setLoading(false);
+  };
+  const handlePause = () => setIsPlaying(false);
+  const handleWaiting = () => setLoading(true);
+  const handleError = () => {
+    setError(true);
+    setLoading(false);
+  };
+
   return (
-    <div className="video-container" style={{ position: "relative" }}>
-      {/* Spinner */}
+    <div ref={containerRef} className="video-container" style={{ position: "relative" }}>
       {loading && !error && <div className="spinner"></div>}
 
-      {/* Video Element */}
       <video
         ref={videoRef}
         src={src}
@@ -77,21 +90,13 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
         loop
         muted={isMuted}
         playsInline
-        onPlaying={() => {
-          setLoading(false);
-          setError(false);
-          setIsPlaying(true);
-        }}
-        onPause={() => setIsPlaying(false)}
-        onWaiting={() => setLoading(true)}
-        onError={() => {
-          setError(true);
-          setLoading(false);
-        }}
+        onPlaying={handlePlay}
+        onPause={handlePause}
+        onWaiting={handleWaiting}
+        onError={handleError}
         style={{ width: "100%", display: error ? "none" : "block" }}
       />
 
-      {/* Error message */}
       {error && (
         <div className="error-overlay">
           <p>Video failed to load.</p>
@@ -99,14 +104,12 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
         </div>
       )}
 
-      {/* Mute/Unmute button */}
       {!error && (
         <button className="sound-btn" onClick={toggleMute}>
           <img src={isMuted ? muteIcon : unmuteIcon} alt="sound" />
         </button>
       )}
 
-      {/* Play button overlay */}
       {!isPlaying && !error && (
         <button className="play-btn" onClick={togglePlay}>
           Play
@@ -121,9 +124,11 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           background: none;
           border: none;
           cursor: pointer;
+          z-index: 10;
         }
         .sound-btn img {
-        width:20px;height:auto;
+          width: 20px;
+          height: auto;
         }
         .play-btn {
           position: absolute;
@@ -132,7 +137,9 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           transform: translate(-50%, -50%);
           background: rgba(0,0,0,0.5);
           border: none;
-          color: white;font-size:30px;z-index:10;
+          color: white;
+          font-size: 30px;
+          z-index: 10;
           padding: 10px 20px;
           cursor: pointer;
           border-radius: 5px;
@@ -140,9 +147,20 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
         .spinner {
           position: absolute;
           top: 50%;
-          left: 50%;margin:-30px 0 0 -30px;
+          left: 50%;
           transform: translate(-50%, -50%);
-          z-index:5;user-select:none;-webkit-user-select:none;width:55px;height:55px;border-radius:50%;border:10px solid #4682B4;opacity:0.8;animation:spinner-bulqg1 0.8s infinite linear alternate,spinner-oaa3wk 1.6s infinite linear;margin:-30px 0 0 -30px;
+          z-index: 5;
+          width: 55px;
+          height: 55px;
+          border-radius: 50%;
+          border: 10px solid #4682B4;
+          border-top-color: white;
+          opacity: 0.8;
+          animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
         }
         .error-overlay {
           position: absolute;
@@ -162,8 +180,6 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           padding: 5px 10px;
           cursor: pointer;
         }
-        @keyframes spinner-bulqg1{0%{clip-path:polygon(50% 50%,0 0,50% 0%,50% 0%,50% 0%,50% 0%,50% 0%);}12.5%{clip-path:polygon(50% 50%,0 0,50% 0%,100% 0%,100% 0%,100% 0%,100% 0%);}25%{clip-path:polygon(50% 50%,0 0,50% 0%,100% 0%,100% 100%,100% 100%,100% 100%);}50%{clip-path:polygon(50% 50%,0 0,50% 0%,100% 0%,100% 100%,50% 100%,0% 100%);}62.5%{clip-path:polygon(50% 50%,100% 0,100% 0%,100% 0%,100% 100%,50% 100%,0% 100%);}75%{clip-path:polygon(50% 50%,100% 100%,100% 100%,100% 100%,100% 100%,50% 100%,0% 100%);}100%{clip-path:polygon(50% 50%,50% 100%,50% 100%,50% 100%,50% 100%,50% 100%,0% 100%);}}@keyframes spinner-oaa3wk{0%{transform:scaleY(1) rotate(0deg);}49.99%{transform:scaleY(1) rotate(135deg);}50%{transform:scaleY(-1) rotate(0deg);}100%{transform:scaleY(-1) rotate(-135deg);}}
-
       `}</style>
     </div>
   );
