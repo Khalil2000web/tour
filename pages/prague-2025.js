@@ -1,4 +1,5 @@
 import TravelsLayout from './TravelsLayout.js';
+import CustomVideo from "../components/CustomVideo.js";
 import Head from 'next/head';
 
 export default function Parge2025Page() {
