@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 
-// global to manage one unmuted video at a time
+// Global to manage one unmuted video at a time
 let currentlyUnmutedVideo = null;
 
 export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
@@ -11,6 +11,13 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+
+  // Update icon instantly and sync state
+  const updateIcon = (muted) => {
+    const icon = containerRef.current?.querySelector(".sound-btn img");
+    if (icon) icon.src = muted ? muteIcon : unmuteIcon;
+    setIsMuted(muted);
+  };
 
   // Toggle play/pause
   const togglePlay = () => {
@@ -25,17 +32,22 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
   // Toggle mute/unmute
   const toggleMute = () => {
     if (!videoRef.current) return;
+
     if (isMuted) {
+      // Mute previous unmuted video immediately
       if (currentlyUnmutedVideo && currentlyUnmutedVideo !== videoRef.current) {
         currentlyUnmutedVideo.muted = true;
+        const prevIcon = currentlyUnmutedVideo.closest(".video-container")?.querySelector(".sound-btn img");
+        if (prevIcon) prevIcon.src = muteIcon;
       }
+
       videoRef.current.muted = false;
       currentlyUnmutedVideo = videoRef.current;
-      setIsMuted(false);
+      updateIcon(false);
     } else {
       videoRef.current.muted = true;
       if (currentlyUnmutedVideo === videoRef.current) currentlyUnmutedVideo = null;
-      setIsMuted(true);
+      updateIcon(true);
     }
   };
 
@@ -47,20 +59,18 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
     videoRef.current.play().catch(() => setIsPlaying(false));
   };
 
-  // IntersectionObserver: mute if fully out of frame
+  // IntersectionObserver: mute only when fully out of frame
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) {
-          if (videoRef.current && !videoRef.current.muted) {
-            videoRef.current.muted = true;
-            setIsMuted(true);
-            if (currentlyUnmutedVideo === videoRef.current) currentlyUnmutedVideo = null;
-          }
-        }
-      },
-      { threshold: 1 }
-    );
+    const observer = new IntersectionObserver(() => {
+      if (!videoRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const fullyOut = rect.bottom < 0 || rect.top > window.innerHeight;
+      if (fullyOut && !videoRef.current.muted) {
+        videoRef.current.muted = true;
+        updateIcon(true);
+        if (currentlyUnmutedVideo === videoRef.current) currentlyUnmutedVideo = null;
+      }
+    }, { threshold: 0 });
 
     if (containerRef.current) observer.observe(containerRef.current);
     return () => observer.disconnect();
@@ -70,8 +80,8 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
   useEffect(() => {
     const frame = requestAnimationFrame(function sync() {
       if (videoRef.current) {
-        setIsMuted(videoRef.current.muted);
         setIsPlaying(!videoRef.current.paused);
+        setIsMuted(videoRef.current.muted);
       }
       requestAnimationFrame(sync);
     });
@@ -105,12 +115,17 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
         onPause={handlePause}
         onWaiting={handleWaiting}
         onError={handleError}
-        style={{ width: "100%", height: "100%", display: error ? "none" : "block", objectFit: "cover" }}
+        style={{
+          width: "100%",
+          height: "100%",
+          display: error ? "none" : "block",
+          objectFit: "cover"
+        }}
       />
 
       {error && (
         <div className="error-overlay">
-          <p>Video failed to load.</p>
+          <p>Video failed to load. Try again.</p>
           <button onClick={retryLoad}>Retry</button>
         </div>
       )}
@@ -131,7 +146,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
         .video-container {
           position: relative;
           width: 100%;
-          min-height: 300px; /* keep container size */
+          min-height: 250px;
           background: black;
         }
 
@@ -145,8 +160,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           z-index: 10;
         }
         .sound-btn img {
-          width: 24px;
-          height: 24px;
+          width: 20px;
         }
 
         .play-btn {
