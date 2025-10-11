@@ -71,7 +71,7 @@ export default function MenuOverlay() {
         
                 <Link
             href="/about"
-            className={`menu-link ${router.pathname === '/tour' ? 'active' : ''}`}
+            className={`menu-link ${router.pathname === '/' ? 'active' : ''}`}
             onClick={() => setMenuOpen(false)}
           >
             TOUR
