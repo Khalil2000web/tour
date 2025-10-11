@@ -13,7 +13,7 @@ export default function MenuOverlay() {
     const path = router.pathname;
 
     // For tour subpages
-    if (path.startsWith('/tour') && path !== '/tour') {
+    if (path.startsWith('/') && path !== '/') {
       const parts = path.split('/');
       return parts[2].toUpperCase(); // gets /tour/subpage -> SUBPAGE
     }
@@ -78,7 +78,7 @@ export default function MenuOverlay() {
 
           <Link
             href="/tour"
-            className={`menu-link ${router.pathname.startsWith('/tour') ? 'active' : ''}`}
+            className={`menu-link ${router.pathname.startsWith('/') ? 'active' : ''}`}
             onClick={() => setMenuOpen(false)}
           >
             TOUR
