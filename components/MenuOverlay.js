@@ -12,20 +12,14 @@ export default function MenuOverlay() {
   const getActivePage = () => {
     const path = router.pathname;
 
-    // Tour subpages (anything under /tour except /tour itself)
-    if (path.startsWith('/tour') && path !== '/tour') {
+    // Tour subpages (anything except the index /)
+    if (path !== '/' && path !== '') {
       const parts = path.split('/');
-      return parts[2] ? parts[2].toUpperCase() : ''; // safeguard
+      return parts[1] ? parts[1].toUpperCase() : '';
     }
 
-    // Normal Tour page
-    switch (path) {
-      case '/':
-      case '/tour':
-        return 'TOUR';
-      default:
-        return '';
-    }
+    // Index page of Tour
+    return 'TOUR';
   };
 
   const [activePage, setActivePage] = useState(getActivePage());
@@ -44,6 +38,7 @@ export default function MenuOverlay() {
 
   return (
     <>
+      {/* Button in header */}
       <button
         ref={buttonRef}
         className="menu-toggle"
@@ -56,8 +51,13 @@ export default function MenuOverlay() {
         PAGES{activePage ? ` / ${activePage}` : ' /'}
       </button>
 
-      <div className={`menu-cover ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(false)}></div>
+      {/* Cover overlay */}
+      <div
+        className={`menu-cover ${menuOpen ? 'open' : ''}`}
+        onClick={() => setMenuOpen(false)}
+      ></div>
 
+      {/* Menu overlay */}
       <div
         id="main-menu"
         ref={menuRef}
@@ -67,6 +67,7 @@ export default function MenuOverlay() {
         aria-hidden={!menuOpen}
       >
         <nav className="menu-links">
+          {/* External links */}
           <a
             href="https://khaliil.com"
             target="_blank"
@@ -77,9 +78,10 @@ export default function MenuOverlay() {
             HOME
           </a>
 
+          {/* Tour index */}
           <Link
-            href="/tour"
-            className={`menu-link ${router.pathname.startsWith('/tour') ? 'active' : ''}`}
+            href="/"
+            className={`menu-link ${router.pathname === '/' ? 'active' : ''}`}
             onClick={() => setMenuOpen(false)}
           >
             TOUR
@@ -106,6 +108,7 @@ export default function MenuOverlay() {
           </a>
         </nav>
 
+        {/* Footer */}
         <div className="menu-footer">© 2025 KHALIIL</div>
       </div>
     </>
