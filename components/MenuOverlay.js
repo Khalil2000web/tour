@@ -8,13 +8,22 @@ export default function MenuOverlay() {
   const buttonRef = useRef(null);
   const router = useRouter();
 
-
+  // Determine active page for button display
   const getActivePage = () => {
-    switch (router.pathname) {
+    const path = router.pathname;
+
+    // For tour subpages
+    if (path.startsWith('/tour') && path !== '/tour') {
+      const parts = path.split('/');
+      return parts[2].toUpperCase(); // gets /tour/subpage -> SUBPAGE
+    }
+
+    // Normal pages
+    switch (path) {
       case '/':
         return 'TOUR';
       default:
-        return ''; 
+        return '';
     }
   };
 
@@ -25,7 +34,6 @@ export default function MenuOverlay() {
   }, [router.pathname]);
 
   const handleToggle = () => setMenuOpen(!menuOpen);
-
 
   useEffect(() => {
     const handleEsc = (e) => e.key === 'Escape' && setMenuOpen(false);
@@ -46,9 +54,9 @@ export default function MenuOverlay() {
       >
         PAGES{activePage ? ` / ${activePage}` : ' /'}
       </button>
-      
-<div className={`menu-cover ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(false)}></div>
-      
+
+      <div className={`menu-cover ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(false)}></div>
+
       <div
         id="main-menu"
         ref={menuRef}
@@ -58,8 +66,7 @@ export default function MenuOverlay() {
         aria-hidden={!menuOpen}
       >
         <nav className="menu-links">
-            
-        <a
+          <a
             href="https://khaliil.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -68,16 +75,16 @@ export default function MenuOverlay() {
           >
             HOME
           </a>
-        
-                <Link
-            href="/about"
-            className={`menu-link ${router.pathname === '/' ? 'active' : ''}`}
+
+          <Link
+            href="/tour"
+            className={`menu-link ${router.pathname.startsWith('/tour') ? 'active' : ''}`}
             onClick={() => setMenuOpen(false)}
           >
             TOUR
           </Link>
-            
-        <a
+
+          <a
             href="https://khaliil.com/about"
             target="_blank"
             rel="noopener noreferrer"
@@ -86,24 +93,19 @@ export default function MenuOverlay() {
           >
             ABOUT
           </a>
-        
-        <a
-            href="https://khaliil.comlegal"
+
+          <a
+            href="https://khaliil.com/legal"
             target="_blank"
             rel="noopener noreferrer"
             className="menu-link"
             onClick={() => setMenuOpen(false)}
           >
             LEGAL
-          </a>   
-
-
+          </a>
         </nav>
-        
-  <div className="menu-footer">
-    © 2025 KHALIIL
-  </div>
-        
+
+        <div className="menu-footer">© 2025 KHALIIL</div>
       </div>
     </>
   );
