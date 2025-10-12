@@ -18,7 +18,6 @@ export default function MenuOverlay() {
       return parts[1] ? parts[1].toUpperCase() : '';
     }
 
-    // Index page of Tour
     return 'TOUR';
   };
 
@@ -38,7 +37,6 @@ export default function MenuOverlay() {
 
   return (
     <>
-      {/* Button in header */}
       <button
         ref={buttonRef}
         className="menu-toggle"
@@ -51,13 +49,11 @@ export default function MenuOverlay() {
         PAGES{activePage ? ` / ${activePage}` : ' /'}
       </button>
 
-      {/* Cover overlay */}
       <div
         className={`menu-cover ${menuOpen ? 'open' : ''}`}
         onClick={() => setMenuOpen(false)}
       ></div>
 
-      {/* Menu overlay */}
       <div
         id="main-menu"
         ref={menuRef}
@@ -67,10 +63,8 @@ export default function MenuOverlay() {
         aria-hidden={!menuOpen}
       >
         <nav className="menu-links">
-          {/* External links */}
           <a
             href="https://khaliil.com"
-            target="_blank"
             rel="noopener noreferrer"
             className="menu-link"
             onClick={() => setMenuOpen(false)}
@@ -78,7 +72,6 @@ export default function MenuOverlay() {
             HOME
           </a>
 
-          {/* Tour index */}
           <Link
             href="/"
             className={`menu-link ${router.pathname === '/' ? 'active' : ''}`}
@@ -89,7 +82,6 @@ export default function MenuOverlay() {
 
           <a
             href="https://khaliil.com/about"
-            target="_blank"
             rel="noopener noreferrer"
             className="menu-link"
             onClick={() => setMenuOpen(false)}
@@ -99,7 +91,6 @@ export default function MenuOverlay() {
 
           <a
             href="https://khaliil.com/legal"
-            target="_blank"
             rel="noopener noreferrer"
             className="menu-link"
             onClick={() => setMenuOpen(false)}
@@ -108,7 +99,6 @@ export default function MenuOverlay() {
           </a>
         </nav>
 
-        {/* Footer */}
         <div className="menu-footer">© 2025 KHALIIL</div>
       </div>
     </>
