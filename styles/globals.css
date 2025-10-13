@@ -19,6 +19,7 @@ body,html {font-family: 'BB Manual Mono Regular', sans-serif;background-color:#0
   text-transform: uppercase;
   overflow-wrap: break-word;
   word-break: break-word;
+  display:none;
 }
 
 .main20 {
