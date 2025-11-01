@@ -1,4 +1,4 @@
-import TravelsLayout from './TravelsLayout';
+import TravelsLayout from '../components/TravelsLayout';
 import Head from 'next/head';
 
 
