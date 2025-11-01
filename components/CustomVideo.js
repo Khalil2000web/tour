@@ -139,7 +139,8 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           position: relative;
           width: 100%;
           min-height: 250px;
-          background: black;
+          background: #07170b;
+          margin-bottom: 20px;
         }
 
         .sound-btn {
@@ -152,9 +153,9 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           z-index: 10;
         }
         .sound-btn img {
-          width: 23px;
-          user-select:none;
-          user-drag:none
+          width: 19px;
+          user-select: none;
+          user-drag: none;
         }
 
         .play-btn {
@@ -184,10 +185,11 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           border: 6px solid #4682B4;
           border-top-color: white;
           opacity: 0.8;
-          animation:spinner-bulqg1 0.8s infinite linear alternate,spinner-oaa3wk 1.6s infinite linear;margin:-30px 0 0 -30px;
+          animation:spinner-bulqg1 0.8s infinite linear alternate,spinner-oaa3wk 1.6s infinite linear;
+          margin:-30px 0 0 -30px;
         }
-        
-@keyframes spinner-bulqg1{0%{clip-path:polygon(50% 50%,0 0,50% 0%,50% 0%,50% 0%,50% 0%,50% 0%);}12.5%{clip-path:polygon(50% 50%,0 0,50% 0%,100% 0%,100% 0%,100% 0%,100% 0%);}25%{clip-path:polygon(50% 50%,0 0,50% 0%,100% 0%,100% 100%,100% 100%,100% 100%);}50%{clip-path:polygon(50% 50%,0 0,50% 0%,100% 0%,100% 100%,50% 100%,0% 100%);}62.5%{clip-path:polygon(50% 50%,100% 0,100% 0%,100% 0%,100% 100%,50% 100%,0% 100%);}75%{clip-path:polygon(50% 50%,100% 100%,100% 100%,100% 100%,100% 100%,50% 100%,0% 100%);}100%{clip-path:polygon(50% 50%,50% 100%,50% 100%,50% 100%,50% 100%,50% 100%,0% 100%);}}@keyframes spinner-oaa3wk{0%{transform:scaleY(1) rotate(0deg);}49.99%{transform:scaleY(1) rotate(135deg);}50%{transform:scaleY(-1) rotate(0deg);}100%{transform:scaleY(-1) rotate(-135deg);}}
+
+        @keyframes spinner-bulqg1{0%{clip-path:polygon(50% 50%,0 0,50% 0%,50% 0%,50% 0%,50% 0%,50% 0%);}12.5%{clip-path:polygon(50% 50%,0 0,50% 0%,100% 0%,100% 0%,100% 0%,100% 0%);}25%{clip-path:polygon(50% 50%,0 0,50% 0%,100% 0%,100% 100%,100% 100%,100% 100%);}50%{clip-path:polygon(50% 50%,0 0,50% 0%,100% 0%,100% 100%,50% 100%,0% 100%);}62.5%{clip-path:polygon(50% 50%,100% 0,100% 0%,100% 0%,100% 100%,50% 100%,0% 100%);}75%{clip-path:polygon(50% 50%,100% 100%,100% 100%,100% 100%,100% 100%,50% 100%,0% 100%);}100%{clip-path:polygon(50% 50%,50% 100%,50% 100%,50% 100%,50% 100%,50% 100%,0% 100%);}}@keyframes spinner-oaa3wk{0%{transform:scaleY(1) rotate(0deg);}49.99%{transform:scaleY(1) rotate(135deg);}50%{transform:scaleY(-1) rotate(0deg);}100%{transform:scaleY(-1) rotate(-135deg);}}
 
         .error-overlay {
           position: absolute;
@@ -199,12 +201,15 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           justify-content: flex-start;
           align-items: center;
           color: #fff;
-          z-index: 20;text-align:center;
+          z-index: 20;
+          text-align:center;
         }
         .error-overlay button {
           margin-top: 10px;
           padding: 5px 10px;
-          cursor: pointer;font-family:arial;font-size:16px;margin-top:5px;
+          cursor: pointer;
+          font-family: Arial;
+          font-size: 14px;
         }
       `}</style>
     </div>
