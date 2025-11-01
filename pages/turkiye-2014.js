@@ -1,4 +1,4 @@
-import TravelsLayout from './TravelsLayout.js';
+import TravelsLayout from '../components/TravelsLayout.js';
 import Head from 'next/head';
 
 export default function Turkiye2014Page() {
