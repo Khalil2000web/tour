@@ -145,7 +145,7 @@ body,html {font-family: 'BB Manual Mono Regular', arial, sans-serif;background-c
   -webkit-user-select: none;
 }
 .galmain3 {width:100%;margin:0 auto;columns: 1;}
-.galmain3 > * {padding-bottom:8px;border-radius:4px;}
+.galmain3 > * {padding-bottom:10px;}
 .image {width: 100%;height:auto;display: block;pointer-events: none;}
 @media screen and (min-width:45em) {.galmain3 {columns: 2;}}
 
