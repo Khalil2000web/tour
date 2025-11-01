@@ -1,4 +1,4 @@
-import TravelsLayout from './TravelsLayout.js';
+import TravelsLayout from '../components/TravelsLayout.js';
 import CustomVideo from "../components/CustomVideo.js";
 import Head from 'next/head';
 
