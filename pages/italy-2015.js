@@ -5,7 +5,7 @@ import CustomVideo from '../components/CustomVideo';
 export default function Italy2015Page({ media }) {
   return (
     <TravelsLayout>
-      <Head><Head>
+<Head>
 <title>KHALIIL</title>
 <meta charSet="UTF-8" />
 <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
