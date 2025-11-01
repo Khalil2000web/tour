@@ -4,7 +4,7 @@
 @font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://khaliil.com/static/fonts/BBManualMonoProTX-SemiBold.otf');}
 * {padding:0;margin:0;box-sizing: border-box;font-family: 'BB Manual Mono Regular', sans-serif;}
 
-body,html {font-family: 'BB Manual Mono Regular', sans-serif;background-color:#000;text-transform:uppercase;color:var(--text-color);webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%;-text-size-adjust: 100%;}
+body,html {font-family: 'BB Manual Mono Regular', arial, sans-serif;background-color:#000;text-transform:uppercase;color:var(--text-color);webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%;-text-size-adjust: 100%;}
 
 .indexmain {
   padding-bottom:160px;
@@ -144,10 +144,7 @@ body,html {font-family: 'BB Manual Mono Regular', sans-serif;background-color:#0
   user-select: none;
   -webkit-user-select: none;
 }
-
-
-.galmain3 {width:100%;margin:0 auto;columns: 1;}
-.galmain3 > * {padding-bottom:5px;}
+.galmain3 {width:100%;margin:0 auto;columns: 1;gap:10px;}
 .image {width: 100%;height:auto;display: block;pointer-events: none;}
 @media screen and (min-width:45em) {.galmain3 {columns: 2;}}
 
@@ -171,14 +168,6 @@ body,html {font-family: 'BB Manual Mono Regular', sans-serif;background-color:#0
   text-shadow: 2px 2px 8px rgba(0,0,0,0.7); 
   margin: 0;
 }
-
-
-
-
-
-
-
-
 
 .menu-toggle {
   background: none;
@@ -297,7 +286,7 @@ text-underline-offset:5px;
   }
 
   .menu-overlay {
-    max-width: 30%; /* sidebar width for bigger screens */
+    max-width: 30%;
   }
 }
 
