@@ -138,9 +138,8 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
         .video-container {
           position: relative;
           width: 100%;
-          min-height: 250px;
+          min-height: 200px;
           background: #07170b;
-          margin-bottom: 20px;
         }
 
         .sound-btn {
