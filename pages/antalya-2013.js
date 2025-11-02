@@ -1,5 +1,6 @@
 import TravelsLayout from '../components/TravelsLayout.js';
 import Head from 'next/head';
+import Link from 'next/link';
 import CustomVideo from '../components/CustomVideo';
 
 export default function Antalya2013Page({ media }) {
