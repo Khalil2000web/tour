@@ -170,6 +170,19 @@ body,html {font-family: 'BB Manual Mono Regular', arial, sans-serif;background-c
   margin: 0;
 }
 
+.back-link {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 90;
+  width:80%;
+  text-align: center;word-spacing:5px;
+  font-size: 15px;
+}
+
+
+
 .menu-toggle {
   background: none;
   border: none;
