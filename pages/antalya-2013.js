@@ -48,9 +48,11 @@ return (
 <meta name="referrer" content="no-referrer-when-downgrade" />
 </Head>
 
-      <div className="travel-title-overlay">
-        <h1>ANTALYA 2013</h1>
-      </div>
+<div className="travel-title-overlay">
+<h1>ANTALYA 2013</h1>
+</div>
+<Link href="/" className="back-link">← BACK</Link>
+      
 
       <div className="galmain3">
         {media.map((item, index) => (
