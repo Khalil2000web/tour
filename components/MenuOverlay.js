@@ -99,7 +99,7 @@ export default function MenuOverlay() {
           </a>
         </nav>
 
-        <div className="menu-footer">© 2025 KHALIIL</div>
+  <div className="menu-footer">© 2025 KHALIIL™</div>
       </div>
     </>
   );
