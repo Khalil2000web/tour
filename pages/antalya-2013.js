@@ -52,7 +52,9 @@ return (
 <div className="travel-title-overlay">
 <h1>ANTALYA 2013</h1>
 </div>
-<Link href="/" className="back-link">← BACK</Link>
+<a onClick={() => history.back()} className="back-link" style={{ cursor: 'pointer' }}>
+  ← BACK
+</a>
       
 
       <div className="galmain3">
