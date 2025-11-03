@@ -175,10 +175,10 @@ body,html {font-family: 'BB Manual Mono Regular', arial, sans-serif;background-c
   bottom: 20px;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 90;
+  z-index: 90;color:var(--text-color);
   width:80%;
   text-align: center;word-spacing:5px;
-  font-size: 15px;
+  font-size: 16px;cursot:pointer;
 }
 
 
