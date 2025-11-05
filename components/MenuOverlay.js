@@ -18,7 +18,7 @@ export default function MenuOverlay() {
       return parts[1] ? parts[1].toUpperCase() : '';
     }
 
-    return 'TOUR';
+    return 'TRIPS';
   };
 
   const [activePage, setActivePage] = useState(getActivePage());
@@ -77,7 +77,7 @@ export default function MenuOverlay() {
             className={`menu-link ${router.pathname === '/' ? 'active' : ''}`}
             onClick={() => setMenuOpen(false)}
           >
-            TOUR
+            TRIPS
           </Link>
 
           <a
