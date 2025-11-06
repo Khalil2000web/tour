@@ -225,11 +225,24 @@ body,html {font-family: 'BB Manual Mono Regular', arial, sans-serif;background-c
 
 
 .menu-footer {
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  align-items:center;
+  justify-content:center;
   margin-top: auto;
   padding: 1.1rem 0;
-  font-size: 14px;
-  color: #e3e3e3;
-  text-transform: uppercase;letter-spacing:3px;
+  text-transform: uppercase;
+}
+
+.menu-footer .menu-link {
+  font-size: 18px;
+}
+
+.menu-footer p {
+  font-size: 15px;
+  color: #e3e3e3;text-align:center;
+  letter-spacing:3px;
 }
 
 .menu-cover {
