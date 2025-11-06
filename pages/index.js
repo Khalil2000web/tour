@@ -50,15 +50,15 @@ export default function Home() {
       <section className="main20">
         <h2>2024</h2>
         <div className="cards">
-          <Link href="/france-2024" className="card">
+          <Link href="/" className="card">
             <img src="https://ik.imagekit.io/cx6yav04a/IMG_0874.gif" loading="eager" className="card-img" alt="FRANCE" />
             <div className="name">FRANCE</div>
           </Link>
-          <Link href="/germany-2024" className="card">
+          <Link href="/" className="card">
             <img src="https://ik.imagekit.io/cx6yav04a/IMG_9199.jpeg" loading="eager" className="card-img" alt="GERMANY" />
             <div className="name">GERMANY</div>
           </Link>
-          <Link href="/switzerland-2024" className="card">
+          <Link href="/" className="card">
             <img src="https://ik.imagekit.io/cx6yav04a/IMG_0877.gif" loading="eager" className="card-img" alt="SWITZERLAND" />
             <div className="name">SWITZERLAND</div>
           </Link>
