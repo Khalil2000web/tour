@@ -89,18 +89,14 @@ export default function MenuOverlay() {
             ABOUT
           </a>
 
-          <a
-            href="https://khaliil.com/legal"
-            rel="noopener noreferrer"
-            className="menu-link"
-            onClick={() => setMenuOpen(false)}
-          >
-            LEGAL
-          </a>
         </nav>
 
-  <div className="menu-footer">© 2025 KHALIIL™</div>
-      </div>
-    </>
-  );
+<div className="menu-footer">
+    <a href="https://khaliil.com/legal" rel="noopener noreferrer" className="menu-link" onClick={() => setMenuOpen(false)} >LEGAL</a>
+    <p>© 2025 KHALIIL™</p>
+</div>
+
+</div>
+</>
+);
 }
